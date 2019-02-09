@@ -1,0 +1,1 @@
+dropdb --if-exists ladybird_db && createdb ladybird_db && echo created database ladybird_db;
