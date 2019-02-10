@@ -14,10 +14,13 @@ const Cocktail = db.define('cocktail', {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  ingredients: Sequelize.STRING,
+  alcohol_free: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false,
+  },
   small_price: Sequelize.INTEGER,
   large_price: Sequelize.INTEGER,
-  ingredients: Sequelize.STRING,
-  alcohol_free: Sequelize.BOOLEAN,
 })
 
 const Wine = db.define('wine', {
