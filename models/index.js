@@ -49,7 +49,7 @@ const Beer = db.define('beer', {
   brewery: Sequelize.STRING,
   region: Sequelize.STRING,
   container: Sequelize.STRING,
-  oz: Sequelize.INTEGER,
+  oz: Sequelize.REAL,
   abv: Sequelize.REAL,
   price: Sequelize.INTEGER,
 })
@@ -64,4 +64,4 @@ const Food = db.define('food', {
   }
 })
 
-module.exports = {db, Cocktail}
+module.exports = {db, Wine, Beer, Cocktail, Food}
