@@ -1,4 +1,4 @@
-const {Wine, Beer, Cocktail, Food} = require('../models')
+const {Wine, Beer, Cocktail, Food, Fondue, Dessert} = require('../models')
 
 const seed = async () => {
   try {
@@ -53,6 +53,32 @@ const seed = async () => {
       {name: 'coppery thorntail', ingredients: 'cucumber, cappelletti aperitivo, grapefruit, rose, lime', small_price: null, large_price: 35},
       {name: 'ginger mockingbird', ingredients: 'ginger syrup, lemon, lime, club soda', small_price: 10, large_price: null, alcohol_free: true},
       {name: 'the basil swift', ingredients: 'basil, passionfruit, lemon, soda', small_price: 10, large_price: null, alcohol_free: true},
+    ])
+    await Food.truncate({restartIdentity: true})
+    await Food.bulkCreate([
+      {name: 'Buffalo maitake buns', ingredients: 'Steamed bao, pickled celery, ranch', price: 5, a_la_carte: true},
+      {name: 'Avocado toast', ingredients: 'Avocado, pickled onion, cilantro, serrano', price: 12},
+      {name: 'Mushroom & onion toast', ingredients: 'Black garlic aioli, hon shimeji, pearl onion', price: 10},
+      {name: 'Kale', ingredients: 'Pickled daikon, radish, puffed rice, black garlic', price: 11},
+      {name: 'Beet ceviche', ingredients: 'Cilantro, avocado, chili & lime', price: 12},
+      {name: 'Avocado', ingredients: 'Seaweed, fried avocado, shiso, black garlic-ponzu', price: 10},
+      {name: 'Mushrooms', ingredients: 'Maitake, white button puree, pickled shimeji', price: 14},
+      {name: 'Baby corn', ingredients: 'Blended herbs, fried baby corn, corn puree, chickpea-based parmesan, almonds', price: 11},
+      {name: 'Brussels sprouts', ingredients: 'Endive, apple, quinoa, soy-truffle vinaigrette', price: 12},
+      {name: 'Roasted sweet potato', ingredients: 'Scallion tempura, miso butter', price: 9},
+      {name: 'Sun dried tomato tart', ingredients: 'Tomato rose vinaigrette, arugula, whipped cashew', price: 14},
+      {name: 'Eggpalnt', ingredients: 'Tomato sauce, garlic-based ricotta, basil', price: 14},
+    ])
+    await Fondue.truncate({restartIdentity: true})
+    await Fondue.bulkCreate([
+      {name: 'Chardonnay & artichoke ', price: 38},
+      {name: 'Mushroom & onion', price: 42},
+      {name: 'Sun-dried tomato & basil', price: 40},
+    ])
+    await Dessert.truncate({restartIdentity: true})
+    await Dessert.bulkCreate([
+      {name: 'Chocolate fondue (for 2 - 3)', ingredients: 'Served with assorted accoutrements', price: 24},
+      {name: 'Dessert flight', ingredients: 'Chocolate & peanut butter mousse, strawberry cheesecake, macerated fresh berries', price: 14},
     ])
     console.log('🗂 ', 'seed complete')
   } catch (e) {

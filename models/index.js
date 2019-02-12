@@ -67,4 +67,15 @@ const Food = db.define('food', {
   }
 })
 
-module.exports = {db, Wine, Beer, Cocktail, Food}
+const Fondue = db.define('fondue', {
+  name: Sequelize.STRING,
+  price: Sequelize.INTEGER
+})
+
+const Dessert = db.define('dessert', {
+  name: Sequelize.STRING,
+  ingredients: Sequelize.STRING,
+  price: Sequelize.INTEGER
+})
+
+module.exports = {db, Wine, Beer, Cocktail, Food, Fondue, Dessert}
