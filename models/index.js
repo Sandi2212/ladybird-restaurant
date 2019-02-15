@@ -14,10 +14,13 @@ const Cocktail = db.define('cocktail', {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  ingredients: Sequelize.STRING,
+  alcohol_free: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false,
+  },
   small_price: Sequelize.INTEGER,
   large_price: Sequelize.INTEGER,
-  ingredients: Sequelize.STRING,
-  alcohol_free: Sequelize.BOOLEAN,
 })
 
 const Wine = db.define('wine', {
@@ -49,7 +52,7 @@ const Beer = db.define('beer', {
   brewery: Sequelize.STRING,
   region: Sequelize.STRING,
   container: Sequelize.STRING,
-  oz: Sequelize.INTEGER,
+  oz: Sequelize.REAL,
   abv: Sequelize.REAL,
   price: Sequelize.INTEGER,
 })
@@ -64,4 +67,15 @@ const Food = db.define('food', {
   }
 })
 
-module.exports = {db, Cocktail}
+const Fondue = db.define('fondue', {
+  name: Sequelize.STRING,
+  price: Sequelize.INTEGER
+})
+
+const Dessert = db.define('dessert', {
+  name: Sequelize.STRING,
+  ingredients: Sequelize.STRING,
+  price: Sequelize.INTEGER
+})
+
+module.exports = {db, Wine, Beer, Cocktail, Food, Fondue, Dessert}
