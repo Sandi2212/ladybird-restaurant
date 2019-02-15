@@ -10,7 +10,9 @@ class App extends Component {
         <main>
           <div className="page-section">
             <Home />
-            <div className="sticky-side"></div>
+            <div className="sticky-side">
+              <img src="/assets/ladybird-interior/ladybird-interior-picture.png" alt="Ladybird interior" />
+            </div>
           </div>
           <div className="page-section">
             {/* <Blurb /> */}
