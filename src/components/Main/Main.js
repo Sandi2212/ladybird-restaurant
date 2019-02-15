@@ -1,6 +1,7 @@
 import React from 'react'
 import './Main.css'
 import Home from '../Home/Home';
+import Blurb from '../Blurb/Blurb'
 
 const Main = props => {
   return (
@@ -12,8 +13,10 @@ const Main = props => {
         </div>
       </div>
       <div className="page-section">
-        {/* <Blurb /> */}
-        <div className="sticky-side"></div>
+        <Blurb />
+        <div className="sticky-side">
+          <img src="/assets/kale-salad/kalesalad.png" alt="Kale Salad" />
+        </div>
       </div>
       <div id="menus" className="page-section">
         <div className="sticky-side"></div>
