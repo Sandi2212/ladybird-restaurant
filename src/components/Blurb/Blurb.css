@@ -1,0 +1,13 @@
+.Blurb {
+  height: 100vh;
+  width: 50vw;
+  color: white;
+  font-size: 40px;
+  background-color: #e29f93;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  padding: 45px;
+}
