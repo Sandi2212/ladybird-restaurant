@@ -1,0 +1,21 @@
+.page-section {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+
+.sticky-side {
+  height: 100vh;
+  width: 50%;
+  position: sticky;
+  overflow: hidden;
+}
+
+.sticky-side img {
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  min-width: 75vh;
+}
