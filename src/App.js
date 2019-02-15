@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         {/* <Header /> */}
         <main>
-          <div className="page-section">
+          <div id="home" className="page-section">
             <Home />
             <div className="sticky-side">
               <img src="/assets/ladybird-interior/ladybird-interior-picture.png" alt="Ladybird interior" />
@@ -18,20 +18,20 @@ class App extends Component {
             {/* <Blurb /> */}
             <div className="sticky-side"></div>
           </div>
-          <div className="page-section">
+          <div id="menus" className="page-section">
             <div className="sticky-side"></div>
             {/* <Menus /> */}
           </div>
-          <div className="page-section">
+          <div id="about" className="page-section">
             {/* <About /> */}
             <div className="sticky-side"></div>
           </div>
           <div className="full-screen-image"></div>
-          <div className="page-section">
+          <div id="events" className="page-section">
             <div className="sticky-side"></div>
             {/* <Events /> */}
           </div>
-          <div className="page-section">
+          <div id="contact" className="page-section">
             {/* <Contact /> */}
             <div className="sticky-side"></div>
           </div>
