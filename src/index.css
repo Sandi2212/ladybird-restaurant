@@ -20,4 +20,10 @@ button {
   font-family: 'Josefin Sans', sans-serif;
   color: white;
   text-transform: uppercase;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(226,159,147, .7)
 }
