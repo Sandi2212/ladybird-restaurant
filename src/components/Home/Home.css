@@ -1,0 +1,39 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 50vw;
+  overflow: scroll;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.home__logo {
+  width: 274px;
+  height: auto;
+}
+
+.home__name {
+  width: 217px;
+  height: auto;
+}
+
+.home__address {
+  font-weight: bold;
+}
+
+.home__address a {
+  text-decoration: none;
+  color: #252525;
+}
+
+.home__strong {
+  font-weight: bold;
+}
+
+.home__address, .home__hours, .home__phone, .home__name {
+  margin-bottom: 2em;
+}
