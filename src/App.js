@@ -9,7 +9,7 @@ class App extends Component {
         {/* <Header /> */}
         <main>
           <div className="page-section">
-            {/* <Home /> */}
+            <Home />
             <div className="sticky-side"></div>
           </div>
           <div className="page-section">
