@@ -43,7 +43,7 @@
     background-color:#e29f93
 }
 .contacts__link{
-  font-weight: 600;
+  font-weight: 300;
   text-decoration: none;
   transition: all .3s;
   opacity: 1;
