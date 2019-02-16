@@ -2,6 +2,7 @@ import React from 'react'
 import './Main.css'
 import Home from '../Home/Home';
 import Blurb from '../Blurb/Blurb'
+import Events from '../Events/Events'
 
 const Main = props => {
   return (
@@ -29,7 +30,7 @@ const Main = props => {
       <div className="full-screen-image"></div>
       <div id="events" className="page-section">
         <div className="sticky-side"></div>
-        {/* <Events /> */}
+        <Events />
       </div>
       <div id="contact" className="page-section">
         {/* <Contact /> */}
