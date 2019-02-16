@@ -37,7 +37,9 @@ const Main = props => {
       </div>
       <div id="contact" className="page-section">
         <Contact /> 
-        <div className="sticky-side"></div>
+        <div className="sticky-side">
+          <img src="/assets/ladybird-interior/ladybird-interior.png" alt="Ladybird Interior" />
+        </div>
       </div>
       
     </div>
