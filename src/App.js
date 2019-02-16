@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Main from './components/Main/Main'
-import MailChimp from './components/MailChimp';
+import MailChimp from './components/Mailchimp/MailChimp';
 
 class App extends Component {
   render() {
@@ -9,7 +9,8 @@ class App extends Component {
       <div className="App">
         {/* <Header /> */}
         <Main />
-        <MailChimp/>
+        {/* <Footer /> */}
+       
       </div>
     );
   }
