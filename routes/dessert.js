@@ -3,9 +3,9 @@
 // ----------------------------------------
 
 const { Dessert } = require("../models/index");
+const ensureAuthenticated = require("../middleware/ensureAuthenticated");
 
 module.exports = app => {
-
     app.get("/desserts", async (req, res) => {
         try {
             const allDesserts = await Dessert.findAll();
@@ -18,7 +18,7 @@ module.exports = app => {
         }
     });
 
-    app.post('/desserts', async (req, res) => {
+    app.post("/desserts", ensureAuthenticated, async (req, res) => {
         try {
             await Dessert.create(req.body);
             res.send(true);
@@ -30,7 +30,7 @@ module.exports = app => {
         }
     });
 
-    app.put('desserts/:id', async (req, res) => {
+    app.put("desserts/:id", ensureAuthenticated, async (req, res) => {
         try {
             const dessertToUpdate = await Dessert.findByPk(req.params.id);
             await dessertToUpdate.update(req.body);
@@ -43,7 +43,7 @@ module.exports = app => {
         }
     });
 
-    app.delete('desserts/:id', async (req, res) => {
+    app.delete("desserts/:id", ensureAuthenticated, async (req, res) => {
         try {
             const dessertToRemove = await Dessert.findByPk(req.params.id);
             await dessertToRemove.destroy();
@@ -55,5 +55,4 @@ module.exports = app => {
             });
         }
     });
-
-}
+};

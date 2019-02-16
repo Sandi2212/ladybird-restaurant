@@ -3,9 +3,9 @@
 // ----------------------------------------
 
 const { Fondue } = require("../models/index");
+const ensureAuthenticated = require("../middleware/ensureAuthenticated");
 
 module.exports = app => {
-
     app.get("/fondues", async (req, res) => {
         try {
             const allFondues = await Fondue.findAll();
@@ -18,7 +18,7 @@ module.exports = app => {
         }
     });
 
-    app.post('/fondues', async (req, res) => {
+    app.post("/fondues", ensureAuthenticated, async (req, res) => {
         try {
             await Fondue.create(req.body);
             res.send(true);
@@ -30,7 +30,7 @@ module.exports = app => {
         }
     });
 
-    app.put('fondues/:id', async (req, res) => {
+    app.put("fondues/:id", ensureAuthenticated, async (req, res) => {
         try {
             const fondueToUpdate = await Fondue.findByPk(req.params.id);
             await fondueToUpdate.update(req.body);
@@ -43,7 +43,7 @@ module.exports = app => {
         }
     });
 
-    app.delete('fondues/:id', async (req, res) => {
+    app.delete("fondues/:id", ensureAuthenticated, async (req, res) => {
         try {
             const fondueToRemove = await Fondue.findByPk(req.params.id);
             await fondueToRemove.destroy();
@@ -55,5 +55,4 @@ module.exports = app => {
             });
         }
     });
-
-}
+};
