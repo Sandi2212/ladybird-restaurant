@@ -35,18 +35,21 @@ import ReserveButton from '../ReserveButton/ReserveButton'
           
           <div className="contact__section-content">
           <span className="contacts__strong"> For General Info</span>
-          <p className="Contacts__section-content">info@ladybirdny.com</p> 
+          <p className="Contacts__section-content">
+          <a className="contacts__link" href="mailto:info@ladybirdny.com">info@ladybirdny.com</a></p> 
           <br/>
           </div>
           <div className="contact__section-content">
           <span className="contacts__strong"> For Private Events Info</span>
-          <p className="Contacts__section-content">events@ladybirdny.com</p> 
+          <p className="Contacts__section-content">
+          <a className="contacts__link" href="mailto:events@ladybirdny.com">events@ladybirdny.com</a></p> 
           <br/>
        
           </div>
           <div className="contact__section-content">
           <span className="contacts__strong"> For Press Inquiries</span>
-          <p className="Contacts__section-content">press@ladybirdny.com</p>
+          <p className="Contacts__section-content">
+          <a className="contacts__link" href="mailto:press@ladybirdny.com">press@ladybirdny.com</a></p>
           <br/>
           </div>
         </div>
