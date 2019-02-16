@@ -65,10 +65,10 @@ app.get('/cocktails', async (req, res) => {
 //  ************* FOOD ROUTES *************
 // ----------------------------------------
 
-app.get('/food', async (req, res) => {
+app.get('/foods', async (req, res) => {
   try {
-    const allFood = await Food.findAll();
-    res.json(allFood);
+    const allFoods = await Food.findAll();
+    res.json(allFoods);
   } catch (error) {
     console.log(error);
     res.status(500).json({
@@ -81,10 +81,10 @@ app.get('/food', async (req, res) => {
 //  *********** FONDUE ROUTES ************
 // ----------------------------------------
 
-app.get('/fondue', async (req, res) => {
+app.get('/fondues', async (req, res) => {
   try {
-    const allFondue = await Fondue.findAll();
-    res.json(allFondue);
+    const allFondues = await Fondue.findAll();
+    res.json(allFondues);
   } catch (error) {
     console.log(error);
     res.status(500).json({
