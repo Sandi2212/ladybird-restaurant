@@ -7,10 +7,13 @@ html, body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Josefin Sans', sans-serif;
   color: #252525;
-  scroll-behavior: smooth;
 }
 
 button {
