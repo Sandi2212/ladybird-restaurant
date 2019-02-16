@@ -1,14 +1,21 @@
 .Home {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 50vw;
   overflow: scroll;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   font-size: 20px;
   font-weight: 300;
+  padding: 15px;
+}
+
+.home__image-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home__logo {
@@ -19,6 +26,11 @@
 .home__name {
   width: 217px;
   height: auto;
+}
+
+.hours__heading {
+  margin: 0;
+  font-size: 20px;
 }
 
 .home__address {
@@ -34,6 +46,6 @@
   font-weight: bold;
 }
 
-.home__address, .home__hours, .home__phone, .home__name {
-  margin-bottom: 2em;
+.home__image-holder, .home__address, .home__hours, .home__phone {
+  margin: 10px;
 }

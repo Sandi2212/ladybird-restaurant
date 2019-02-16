@@ -4,6 +4,7 @@
   display: flex;
   flex-flow: row nowrap;
   position: relative;
+  animation: fade-in .7s linear;
 }
 
 .sticky-side {

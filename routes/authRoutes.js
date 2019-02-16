@@ -24,4 +24,9 @@ module.exports = app => {
         res.send(req.user);
         console.log(req.user);
     });
+
+    app.get("/auth/logout", (req, res) => {
+        req.logout();
+        res.send(req.user);
+    });
 };
