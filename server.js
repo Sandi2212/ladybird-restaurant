@@ -61,6 +61,22 @@ app.get('/cocktails', async (req, res) => {
   }
 })
 
+// ----------------------------------------
+//  ************* FOOD ROUTES *************
+// ----------------------------------------
+
+app.get('/food', async (req, res) => {
+  try {
+    const allFood = await Food.findAll();
+    res.json(allFood);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: error.message
+    });
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Express server is listening on port ${PORT}`)
 })
