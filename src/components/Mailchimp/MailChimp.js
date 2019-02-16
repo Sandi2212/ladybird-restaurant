@@ -36,13 +36,7 @@ class MailChimp extends React.Component {
               </label>
               
         <input type="submit" value="Sign Up" name="Sign Up" id="mc-embedded-subscribe" className="Sign-Up"/>
-        <div style={{position: 'absolute', left: '-5000px'}} aria-hidden='true' aria-label="Please leave the following three fields empty">
-            
-        <label htmlFor="b_email">Email: </label>
-        <input type="email" name="b_email" tabIndex="-1" value="" placeholder="youremail@gmail.com" id="b_email"/>
-
-                    
-        </div>
+      
       </form>
       </div>
         )
