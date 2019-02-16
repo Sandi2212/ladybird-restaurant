@@ -21,8 +21,12 @@ const Main = props => {
         </div>
       </div>
       <div id="menus" className="page-section">
-        <div className="sticky-side"></div>
+        <div className="sticky-side">
+        <img src="/assets/cocktail/cocktail.png" alt="Ladybird-door" />
+        </div>
+
         {/* <Menus /> */}
+        
       </div>
       <div id="about" className="page-section">
         {/* <About /> */}
