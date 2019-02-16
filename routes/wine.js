@@ -2,10 +2,10 @@
 //  ************ WINE ROUTES **************
 // ----------------------------------------
 
-const { Wine } = require('../models/index')
+const { Wine } = require("../models/index");
+const ensureAuthenticated = require("../middleware/ensureAuthenticated");
 
 module.exports = app => {
-
     app.get("/wines", async (req, res) => {
         try {
             const allWines = await Wine.findAll();
@@ -18,7 +18,7 @@ module.exports = app => {
         }
     });
 
-    app.post('/wines', async (req, res) => {
+    app.post("/wines", ensureAuthenticated, async (req, res) => {
         try {
             await Wine.create(req.body);
             res.send(true);
@@ -28,9 +28,9 @@ module.exports = app => {
                 message: error.message
             });
         }
-    })
+    });
 
-    app.put('wines/:id', async (req, res) => {
+    app.put("wines/:id", ensureAuthenticated, async (req, res) => {
         try {
             const wineToUpdate = await Wine.findByPk(req.params.id);
             await wineToUpdate.update(req.body);
@@ -41,9 +41,9 @@ module.exports = app => {
                 message: error.message
             });
         }
-    })
+    });
 
-    app.delete('wines/:id', async (req, res) => {
+    app.delete("wines/:id", ensureAuthenticated, async (req, res) => {
         try {
             const wineToRemove = await Wine.findByPk(req.params.id);
             await wineToRemove.destroy();
@@ -54,6 +54,5 @@ module.exports = app => {
                 message: error.message
             });
         }
-    })
-
-}
+    });
+};

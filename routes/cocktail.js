@@ -3,9 +3,9 @@
 // ----------------------------------------
 
 const { Cocktail } = require("../models/index");
+const ensureAuthenticated = require("../middleware/ensureAuthenticated");
 
 module.exports = app => {
-
     app.get("/cocktails", async (req, res) => {
         try {
             const allCocktails = await Cocktail.findAll();
@@ -18,7 +18,7 @@ module.exports = app => {
         }
     });
 
-    app.post('/cocktails', async (req, res) => {
+    app.post("/cocktails", ensureAuthenticated, async (req, res) => {
         try {
             await Cocktail.create(req.body);
             res.send(true);
@@ -30,7 +30,7 @@ module.exports = app => {
         }
     });
 
-    app.put('cocktails/:id', async (req, res) => {
+    app.put("cocktails/:id", ensureAuthenticated, async (req, res) => {
         try {
             const cocktailToUpdate = await Cocktail.findByPk(req.params.id);
             await cocktailToUpdate.update(req.body);
@@ -43,7 +43,7 @@ module.exports = app => {
         }
     });
 
-    app.delete('cocktails/:id', async (req, res) => {
+    app.delete("cocktails/:id", ensureAuthenticated, async (req, res) => {
         try {
             const cocktailToRemove = await Cocktail.findByPk(req.params.id);
             await cocktailToRemove.destroy();
@@ -55,5 +55,4 @@ module.exports = app => {
             });
         }
     });
-
-}
+};
