@@ -4,8 +4,10 @@ import './Home.css'
 const Home = props => {
   return (
     <div className="Home">
-      <img className="home__logo" src="/assets/logo-trans/logo-trans.png" alt="logo" />
-      <img className="home__name" src="/assets/ladybird.svg" alt="Ladybird" />
+      <div className="home__image-holder">
+        <img className="home__logo" src="/assets/logo-trans/logo-trans.png" alt="logo" />
+        <img className="home__name" src="/assets/ladybird.svg" alt="Ladybird" />
+      </div>
       <div className="home__address">
         <a href="https://goo.gl/maps/VUyxW7ZqUK22" target="_blank" rel="noopener noreferrer">
           111 East 7th Street<br/> 
