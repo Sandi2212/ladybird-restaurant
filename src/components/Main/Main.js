@@ -4,6 +4,7 @@ import Home from '../Home/Home';
 import Blurb from '../Blurb/Blurb';
 import About from '../About/About';
 import Events from '../Events/Events'
+// import Menus from '../Menus/Menus';
 
 const Main = props => {
   return (
@@ -30,7 +31,9 @@ const Main = props => {
         <img src="assets/ladybird-door/ladybird-door.png" alt="ladybird door"  />
         </div>
       </div>
-      <div className="full-screen-image"></div>
+      <div className="full-screen-image">
+      <img src="assets/ladybird-cocktail6/ladybird-cocktail6.png" alt="ladybird cocktail"  />
+      </div>
       <div id="events" className="page-section">
         <div className="sticky-side">
           <img src="/assets/cocktail/ladybird-cocktail-2.png" alt="Cocktail" />
