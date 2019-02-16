@@ -4,6 +4,9 @@
     width: 50vw;
     margin: 0 auto;
     align-items: center;
+    overflow: scroll;
+    flex-direction: row;
+    padding: 45px;
 }
 
 .menus_header {
