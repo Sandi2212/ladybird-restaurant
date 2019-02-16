@@ -13,6 +13,20 @@ const Footer = props => {
           <li className="footer__nav-item"><a href="#events">Events</a></li>
           <li className="footer__nav-item"><a href="#contact">Contact</a></li>
         </ul>
+        <ul className="footer__social">
+          <a className="footer__social-link" href="https://twitter.com/ladybird_nyc?lang=en" target="_blank" rel="noopener noreferrer">
+            <li className="footer__social-item"><i className="fab fa-twitter"></i></li>
+          </a>
+          <a className="footer__social-link" href="http://www.facebook.com/ladybirdnyc" target="_blank" rel="noopener noreferrer">
+            <li className="footer__social-item"><i className="fab fa-facebook-f"></i></li>
+          </a>
+          <a className="footer__social-link" href="http://instagram.com/ladybird_nyc" target="_blank" rel="noopener noreferrer">
+            <li className="footer__social-item"><i className="fab fa-instagram"></i></li>
+          </a>
+          <a className="footer__social-link" href="https://www.yelp.com/biz/ladybird-new-york" target="_blank" rel="noopener noreferrer">
+            <li className="footer__social-item"><i className="fab fa-yelp"></i></li>
+          </a>
+        </ul>
       </div>
       <MailChimp />
     </div>
