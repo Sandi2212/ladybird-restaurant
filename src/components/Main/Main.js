@@ -26,7 +26,10 @@ const Main = props => {
       </div>
       <div id="about" className="page-section">
         {/* <About /> */}
-        <div className="sticky-side"></div>
+     
+        <div className="sticky-side">
+        <img src="/assets/door/door.png" alt="Ladybird-door" />
+        </div>
       </div>
       <div className="full-screen-image"></div>
       <div id="events" className="page-section">
@@ -37,7 +40,10 @@ const Main = props => {
       </div>
       <div id="contact" className="page-section">
         <Contact /> 
-        <div className="sticky-side"></div>
+      
+        <div className="sticky-side-door">
+        <img src="/assets/ladybird-interior/interior.png" alt="Ladybird interior" />
+        </div>
       </div>
       
     </div>
