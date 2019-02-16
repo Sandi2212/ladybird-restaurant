@@ -3,6 +3,7 @@ import './Main.css'
 import Home from '../Home/Home';
 import Blurb from '../Blurb/Blurb'
 import Events from '../Events/Events'
+import Contact from '../Contact/Contact'
 
 const Main = props => {
   return (
@@ -35,10 +36,12 @@ const Main = props => {
         <Events />
       </div>
       <div id="contact" className="page-section">
-        {/* <Contact /> */}
+        <Contact /> 
         <div className="sticky-side"></div>
       </div>
+      
     </div>
+
   )
 }
 
