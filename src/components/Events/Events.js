@@ -11,7 +11,7 @@ const Events = props => {
         <p className="events__section-content">6-Course Tasting Menu<br />
           $150 Per Couple<br />
           Plus Tax & Gratuity<br />
-          <span className="events__strong">6:30PM &amp; 9:00 PM</span>
+          <span className="events__strong">6:30 PM &amp; 9:00 PM</span>
         </p>
       </div>
       <div className="events__section">
@@ -20,7 +20,7 @@ const Events = props => {
           6-Course Tasting Menu<br />
           $150 Per Couple<br />
           Plus Tax & Gratuity<br />
-          <span className="events__strong">6:30PM & 9:00 PM</span>
+          <span className="events__strong">6:30 PM &amp; 9:00 PM</span>
         </p>
       </div>
       <ReserveButton />

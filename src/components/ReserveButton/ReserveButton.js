@@ -1,4 +1,5 @@
 import React from 'react';
+import './ReserveButton.css'
 
 const ReserveButton = () => {
     return ( 
