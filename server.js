@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 //  ************ WINE ROUTES **************
 // ----------------------------------------
 
-app.get('/wine', async (req, res) => {
+app.get('/wines', async (req, res) => {
   try {
     const allWines = await Wine.findAll();
     res.json(allWines);
@@ -28,14 +28,31 @@ app.get('/wine', async (req, res) => {
     });
   }
 })
+
 // ----------------------------------------
 //  ************ BEER ROUTES **************
 // ----------------------------------------
 
-app.get('/beer', async (req, res) => {
+app.get('/beers', async (req, res) => {
   try {
     const allBeers = await Beer.findAll();
     res.json(allBeers);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: error.message
+    });
+  }
+})
+
+// ----------------------------------------
+//  ********** COCKTAIL ROUTES ***********
+// ----------------------------------------
+
+app.get('/cocktails', async (req, res) => {
+  try {
+    const allCocktails = await Cocktail.findAll();
+    res.json(allCocktails);
   } catch (error) {
     console.log(error);
     res.status(500).json({
