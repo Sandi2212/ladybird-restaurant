@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import ReserveButton from '../ReserveButton/ReserveButton'
 
 const Home = props => {
   return (
@@ -20,8 +21,7 @@ const Home = props => {
       <div className="home__phone">
         <span className="home__strong">Phone No.</span> 917.261.5524
       </div>
-      <button href= "https://resy.com/cities/ny/ladybird?gclid=EAIaIQobChMI9577u6K-4AIVGI7ICh3ljgTsEAAYASAAEgLPr_D_BwE&seats=2&date=2019-02-15"
-       className="home__button">Book Reservation</button>
+      <ReserveButton />
     </div>
   )
 }
