@@ -10,7 +10,8 @@ import ReserveButton from '../ReserveButton/ReserveButton'
         <div className="Rectangle"></div>
         <div className="contact__section">
           <h4 className="contact__section-heading">Location</h4>
-          <p className="Contacts__section-content"> 111 East 7th street<br />
+          <p className="Contacts__section-content"> 
+          <a className="contacts__link" href="https://goo.gl/maps/VUyxW7ZqUK22" target="_blank" rel="noopener noreferrer"> 111 East 7th street</a><br />
             New York, NY 10009<br />
             (Between 1st Ave and Ave A) 
             <br />
@@ -32,19 +33,22 @@ import ReserveButton from '../ReserveButton/ReserveButton'
         <div className="contact__section">
           <h4 className="contact__section-heading">EMAIL</h4>
           
-          <p className="contact__section-content">
+          <div className="contact__section-content">
           <span className="contacts__strong"> For General Info</span>
           <p className="Contacts__section-content">info@ladybirdny.com</p> 
-          </p>
-          <p className="contact__section-content">
+          <br/>
+          </div>
+          <div className="contact__section-content">
           <span className="contacts__strong"> For Private Events Info</span>
           <p className="Contacts__section-content">events@ladybirdny.com</p> 
+          <br/>
        
-          </p>
-          <p className="contact__section-content">
+          </div>
+          <div className="contact__section-content">
           <span className="contacts__strong"> For Press Inquiries</span>
           <p className="Contacts__section-content">press@ladybirdny.com</p>
-          </p>
+          <br/>
+          </div>
         </div>
         <ReserveButton />
       </div>
