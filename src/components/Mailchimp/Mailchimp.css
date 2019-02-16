@@ -1,5 +1,4 @@
 .Join-the-Mailing-List {
-    background-color:  #252525;
     width: 374px;
     height: 37px;
     font-family: JosefinSans;
@@ -45,7 +44,3 @@
   .Sign-Up:hover {
     opacity: .7;
   } 
-.parent{
-    position: absolute;
-    left: 800px;
-}
