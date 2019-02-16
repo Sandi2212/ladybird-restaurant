@@ -1,7 +1,8 @@
 import React from 'react'
 import './Main.css'
 import Home from '../Home/Home';
-import Blurb from '../Blurb/Blurb'
+import Blurb from '../Blurb/Blurb';
+import About from '../About/About';
 
 const Main = props => {
   return (
@@ -23,8 +24,10 @@ const Main = props => {
         {/* <Menus /> */}
       </div>
       <div id="about" className="page-section">
-        {/* <About /> */}
-        <div className="sticky-side"></div>
+        <About /> 
+        <div className="sticky-side">
+        <img src="assets/ladybird-door/ladybird-door.png" alt="ladybird door"  />
+        </div>
       </div>
       <div className="full-screen-image"></div>
       <div id="events" className="page-section">

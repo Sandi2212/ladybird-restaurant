@@ -3,22 +3,26 @@
     flex-direction: column;
     height: 100vh;
     width: 50vw;
-    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    margin: 0 auto;
 }
 
 .about_heading {
-    width: 217px;
-    height: auto;
+    width: 142px;
+    height: 45px;
     font-size: 40px;
     font-weight: bold;
     font-style: normal;
     text-align: center;
     color: black;
-    }
+}
 
     .about_img {
-        width: 270px;
-        height: auto;
+        width: 287px;
+        height: 287px;
+        margin: 0 auto;
+        display: flex;
     }
 
 .Ravi-DeRossi_title {
@@ -26,21 +30,37 @@
     font-weight: bold;
     font-style: normal;
     text-align: center;
-    font-family: JosefinSans;
+    font-family: 'Josefin Sans';
 }
 
-.Ravi-Derossi_restaur {
+.Ravi-DeRossi_restaur {
+    width: 195px;
+    height: 62px;
     font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
     font-style: italic;
-    font-family: PlayfairDisplay;
+    font-family: 'Playfair Display-Light';
+    line-height: 2.7;
     text-align: center;
+    margin: 0 auto;
 }
 
 .Ravi-DeRossi_travel {
-    font-family: JosefinSans-Light;
-    font-size: 25px;
+    width: 500px;
+    height: 375px;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
     font-weight: 300;
+    font-stretch: normal;
     font-style: normal;
-    line-height: 25px;
+    text-align: center;
+    letter-spacing: normal;
+    line-height: 1.2;
     color: black; 
+    margin: 0 auto;
+}
+
+.Ravi-DeRossi_travel p1 {
+    color: #e29f93;
 }
