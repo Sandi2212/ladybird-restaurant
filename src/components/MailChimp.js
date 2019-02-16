@@ -1,13 +1,8 @@
 import React from 'react'
 
 class MailChimp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        emailValue: '',
-        fNameValue: '',
-        lNameValue: '',
-    };
+  constructor() {
+    super();
   }
 
     render() {
@@ -16,38 +11,6 @@ class MailChimp extends React.Component {
             <input type="hidden" name="u" value="b766b2cbbd7c7f8ef0c6ddf71"/>
             <input type="hidden" name="id" value="69e75b390a"/>
             
-                {/* <label htmlFor='MERGE0'>
-                    Email
-                    <input 
-                        type="email" 
-                        name="EMAIL" 
-                        id="MERGE0"
-                        value={this.state.emailValue} 
-                        onChange={ (e)=>{this.setState({emailValue: e.target.value});} } 
-                        autoCapitalize="off" 
-                        autoCorrect="off"
-                     /> 
-                </label>
-                <label htmlFor='MERGE1'>
-                    First name
-                    <input 
-                        type="text" 
-                        name="FNAME" 
-                        id="MERGE1" 
-                        value={this.state.fNameValue} 
-                        onChange={(e)=>{this.setState({fNameValue: e.target.value});}}
-                    />
-                </label>
-                <label htmlFor='MERGE2'>
-                    Last name
-                    <input 
-                        type="text" 
-                        name="LNAME" 
-                        id="MERGE2" 
-                        value={this.state.lNameValue} 
-                        onChange={(e)=>{this.setState({lNameValue: e.target.value});}}
-                    />
-                </label> */}
                   <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/>
 
                 <div style={{position: 'absolute', left: '-5000px'}} aria-hidden='true' aria-label="Please leave the following three fields empty">
