@@ -29,7 +29,9 @@ const Main = props => {
       </div>
       <div className="full-screen-image"></div>
       <div id="events" className="page-section">
-        <div className="sticky-side"></div>
+        <div className="sticky-side">
+          <img src="/assets/cocktail/ladybird-cocktail-2.png" alt="Cocktail" />
+        </div>
         <Events />
       </div>
       <div id="contact" className="page-section">
