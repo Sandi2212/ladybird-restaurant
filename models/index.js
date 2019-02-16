@@ -10,7 +10,10 @@ const db = new Sequelize({
 });
 
 const User = db.define("user", {
-    googleId: Sequelize.STRING
+    googleId: Sequelize.STRING,
+    first_name: Sequelize.STRING,
+    last_name: Sequelize.STRING,
+    email: Sequelize.STRING
 });
 
 const Cocktail = db.define("cocktail", {
