@@ -1,9 +1,9 @@
 .Home {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 50vw;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
