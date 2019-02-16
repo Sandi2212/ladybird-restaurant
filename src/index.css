@@ -10,6 +10,7 @@ html, body {
 body {
   font-family: 'Josefin Sans', sans-serif;
   color: #252525;
+  scroll-behavior: smooth;
 }
 
 button {
