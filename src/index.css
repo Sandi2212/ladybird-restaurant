@@ -10,6 +10,7 @@ html, body {
 body {
   font-family: 'Josefin Sans', sans-serif;
   color: #252525;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -27,4 +28,13 @@ button {
 
 button:hover {
   background-color: rgba(226,159,147, .7)
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
