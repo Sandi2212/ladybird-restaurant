@@ -20,3 +20,12 @@
   width: 100%;
   min-width: 75vh;
 }
+
+.full-screen-image {
+  background-image: url(/assets/cocktail-6/ladybird-cocktail-6.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}

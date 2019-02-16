@@ -4,7 +4,7 @@ import Home from '../Home/Home';
 import Blurb from '../Blurb/Blurb';
 import About from '../About/About';
 import Events from '../Events/Events'
-// import Menus from '../Menus/Menus';
+import Menus from '../Menus/Menus';
 
 const Main = props => {
   return (
@@ -22,8 +22,10 @@ const Main = props => {
         </div>
       </div>
       <div id="menus" className="page-section">
-        <div className="sticky-side"></div>
-        {/* <Menus /> */}
+        <div className="sticky-side">
+        <img src="/assets/ladybird-napkin/ladybird-napkin.png" alt="ladybird napkin" />
+        </div>
+         <Menus /> 
       </div>
       <div id="about" className="page-section">
         <About /> 
@@ -32,7 +34,6 @@ const Main = props => {
         </div>
       </div>
       <div className="full-screen-image">
-      <img src="assets/ladybird-cocktail6/ladybird-cocktail6.png" alt="ladybird cocktail"  />
       </div>
       <div id="events" className="page-section">
         <div className="sticky-side">
