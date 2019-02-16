@@ -3,6 +3,7 @@ import './Main.css'
 import Home from '../Home/Home';
 import Blurb from '../Blurb/Blurb';
 import About from '../About/About';
+import Events from '../Events/Events'
 
 const Main = props => {
   return (
@@ -31,8 +32,10 @@ const Main = props => {
       </div>
       <div className="full-screen-image"></div>
       <div id="events" className="page-section">
-        <div className="sticky-side"></div>
-        {/* <Events /> */}
+        <div className="sticky-side">
+          <img src="/assets/cocktail/ladybird-cocktail-2.png" alt="Cocktail" />
+        </div>
+        <Events />
       </div>
       <div id="contact" className="page-section">
         {/* <Contact /> */}

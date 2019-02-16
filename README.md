@@ -7,6 +7,7 @@ This project is a redesign of the website for New York City restaurant Ladybird.
 ### Getting Started
 - Fork and clone this repository
 - Inside the new directory, run the following commands in your CLI:
+    - <code>npm install</code>
     - <code>npm run db:init</code>
     - <code>npm run db:reset</code>
     - <code>npm run db:seed</code>
