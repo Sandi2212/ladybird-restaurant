@@ -7,25 +7,40 @@
 }
 
 .about_heading {
-    width: 270px;
+    width: 217px;
     height: auto;
+    font-size: 40px;
     font-weight: bold;
     font-style: normal;
+    text-align: center;
     color: black;
     }
 
-.raviderossi_title {
-    font-size: 30px;
+    .about_img {
+        width: 270px;
+        height: auto;
+    }
+
+.Ravi-DeRossi_title {
+    font-size: 35px;
     font-weight: bold;
     font-style: normal;
     text-align: center;
     font-family: JosefinSans;
 }
 
-.raviderossi_restaur {
+.Ravi-Derossi_restaur {
     font-size: 20px;
     font-style: italic;
     font-family: PlayfairDisplay;
     text-align: center;
+}
 
+.Ravi-DeRossi_travel {
+    font-family: JosefinSans-Light;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 25px;
+    color: black; 
 }
