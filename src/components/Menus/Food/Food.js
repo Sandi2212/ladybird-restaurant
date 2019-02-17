@@ -1,52 +1,45 @@
 import React , {Component} from "react"
 import axios from "axios"
 class  Food extends Component{
-constructor(){
-super()
-this.state={
-    allFood:null,
-    allFondues:null,
-    allDesserts:null
+    constructor(){
+        super()
+        this.state={
+            allFood:null,
+            allFondues:null,
+            allDesserts:null
+        }
     }
-}
-        getFonduesData = async () => {
-        await axios.get("http://localhost:5000/fondues").then(response => {
-          
-          const allFondues = response.data;
-          this.setState({allFondues});
-        });
-     }
-        getDessertsData = async () => {
-        await axios.get("http://localhost:5000/desserts").then(response => {
-       
-          const allDesserts = response.data;
-          this.setState({allDesserts});
-        });
-     }
-        getFoodData = async () => {
-        await axios.get("http://localhost:5000/foods").then(response => {
-        
-          const allFood = response.data;
-          this.setState({allFood});
-        });
-     }
+    
+    getFonduesData = async () => {
+        const response = await axios.get("/fondues")
+        const allFondues = response.data;
+        this.setState({allFondues});
+    }
+    getDessertsData = async () => {
+        const response = await axios.get("/desserts")
+        const allDesserts = response.data;
+        this.setState({allDesserts});
+    }
+    getFoodData = async () => {
+        await axios.get("/foods")
+        const allFood = response.data;
+        this.setState({allFood});
+    }
   
-     componentDidMount(){
+    componentDidMount(){
         this.getFonduesData();
         this.getDessertsData();
         this.getFoodData();
-     }
+    }
   
-render(){
-    return(
-
-
-    <div>
-
-    </div>
-)
+    render(){
+        return(
+            <div className="Food">
+                <h1>Food Component</h1>
+            </div>
+        )
+    }
 }
 
-}
 export default Food
    
