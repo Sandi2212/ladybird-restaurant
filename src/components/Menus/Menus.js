@@ -12,6 +12,12 @@ class Menus extends Component {
         }
     }
 
+    handleClick = (e) => {
+      const activeMenu = e.target.id
+      if (!['wine', 'food', 'cocktails'].includes(activeMenu)) {return null;}
+      this.setState({activeMenu})
+    }
+
     render() {
       const activeMenu = this.state.activeMenu
       const renderActiveMenue = (selectedMenu) => {
@@ -27,9 +33,9 @@ class Menus extends Component {
           <div className="Menus">
               <h1 className="menus_header">MENUS</h1>
               <div className="menus_titles">
-                  <h1 className="menus_food">Food</h1>
-                  <h1 className="menus_cocktails">Cocktails</h1>
-                  <h1 className="menus_wine">Wine</h1>
+                  <h1 id="food" className="menus__link" onClick={this.handleClick}>Food</h1>
+                  <h1 id="cocktails" className="menus__link" onClick={this.handleClick}>Cocktails</h1>
+                  <h1 id="wine" className="menus__link" onClick={this.handleClick}>Wine</h1>
               </div>
               {renderActiveMenue(activeMenu)}
           </div>

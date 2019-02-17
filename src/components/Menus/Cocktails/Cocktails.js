@@ -20,7 +20,7 @@ class  Cocktails extends Component{
     render(){
         return(
             <div className="Cocktails">
-
+              <h1>Cocktails component</h1>
             </div>
         )
     }
