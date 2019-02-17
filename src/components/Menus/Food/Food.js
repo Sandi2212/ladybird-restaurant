@@ -9,8 +9,7 @@ class  Food extends Component{
         this.state={
             allFoods:null,
             allFondues:null,
-            allDesserts:null,
-            url:"http://localhost:5000"
+            allDesserts:null
         }
     }
 
@@ -19,7 +18,9 @@ class  Food extends Component{
             <div key={index} className="oc-food-item">
                 <h3 className="oc-food-item-title">
                     {foodItem.name}
-                    <span className="oc-food-item-price"> {foodItem.price} </span>
+                    <span className="oc-food-item-price"> 
+                        {foodItem.a_la_carte ? foodItem.price + "/EA" : foodItem.price} 
+                    </span>
                 </h3>
                 <p className="oc-food-item-ingredients"> {foodItem.ingredients} </p>
             </div>
@@ -27,21 +28,21 @@ class  Food extends Component{
     )
 
     getFonduesData = async () => {
-        const response = await axios.get(`${this.state.url}/fondues`)
+        const response = await axios.get("/fondues")
         const allFondues = response.data;
         console.log(allFondues)
         this.setState({allFondues});
     }
 
     getDessertsData = async () => {
-        const response = await axios.get(`${this.state.url}/desserts`)
+        const response = await axios.get("/desserts")
         const allDesserts = response.data;
         console.log(allDesserts)
         this.setState({allDesserts});
     }
 
     getFoodsData = async () => {
-        const response = await axios.get(`${this.state.url}/foods`)
+        const response = await axios.get("/foods")
         const allFoods = response.data;
         console.log(allFoods)
         this.setState({allFoods});
