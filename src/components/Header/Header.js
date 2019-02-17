@@ -1,12 +1,23 @@
 import React, { Component } from "react";
+import ReserveButton from "../ReserveButton/ReserveButton";
 import "./Header.css";
 
 class Header extends Component {
+    componentDidMount() {
+        let { offsetHeight } = this.refs.header;
+        this.props.getOffsetHeight(offsetHeight);
+    }
+
     render() {
         return (
-            <header>
+            <header ref="header">
                 <div>
-                    <img src="/assets/logo-trans/logo-trans-header.png" />
+                    <a href="#home">
+                        <img
+                            src="/assets/logo-trans/logo-trans-header.png"
+                            alt="logo"
+                        />
+                    </a>
                 </div>
 
                 <nav className="nav-bar">
@@ -26,9 +37,7 @@ class Header extends Component {
                     </ul>
                 </nav>
                 <div>
-                    <a href="http://www.ladybirdny.com/reserve">
-                        <button className="button">BOOK NOW</button>
-                    </a>
+                    <ReserveButton />
                 </div>
             </header>
         );
