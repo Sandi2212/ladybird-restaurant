@@ -21,7 +21,7 @@ class  Food extends Component{
         this.setState({allDesserts});
     }
     getFoodData = async () => {
-        await axios.get("/foods")
+        const response = await axios.get("/foods")
         const allFood = response.data;
         this.setState({allFood});
     }
