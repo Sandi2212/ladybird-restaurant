@@ -13,7 +13,10 @@ class Header extends Component {
             <header ref="header">
                 <div>
                     <a href="#home">
-                        <img src="/assets/logo-trans/logo-trans-header.png" />
+                        <img
+                            src="/assets/logo-trans/logo-trans-header.png"
+                            alt="logo"
+                        />
                     </a>
                 </div>
 
