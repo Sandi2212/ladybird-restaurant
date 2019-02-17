@@ -8,7 +8,8 @@ const About = props => {
       <img className="about_img" src="/assets/Ravi/derossi.png" alt="Ravi DeRossi" />
       <div className="Ravi-DeRossi ">
         <h2 className="Ravi-DeRossi_title">Ravi DeRossi</h2>
-        <h3 className="Ravi-DeRossi_restaur">Restauranteur</h3>
+        <p className="Ravi-DeRossi_restaur">Restauranteur</p>
+        </div>
         <div className="Ravi-DeRossi_travel">
           <p>Ravi traveled around the world as an artist and painter, 
           before returning to his native New York City and taking 
@@ -29,7 +30,7 @@ const About = props => {
 
         </div>
     
-      </div>
+      
     </div>
   );
 };

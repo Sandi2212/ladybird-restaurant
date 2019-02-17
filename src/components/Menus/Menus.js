@@ -1,8 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Menus.css'
 
-const Menus = props => {
-    return (
+class Menus extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            menus: ''
+        }
+    }
+        render() {
+        return (
         <div className="Menus">
 
         <h1 className="menus_header">MENUS</h1>
@@ -15,6 +22,8 @@ const Menus = props => {
         </div>
         </div>
     )
+    }
+
 }
 
 
