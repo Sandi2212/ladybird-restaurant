@@ -1,0 +1,33 @@
+.drink-title,
+.drink-price {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "JosefinSans-SemiBold", sans-serif;
+    font-size: 20px;
+}
+
+.drink-title span {
+    padding-left: 20px;
+}
+
+.wines {
+    font-family: JosefinSans;
+}
+
+.wines li {
+    list-style: none;
+}
+
+.wines span {
+    text-transform: capitalize;
+    font-size: 17px;
+    font-family: "JosefinSans-Light", sans-serif;
+}
+
+.winelist {
+    display: flex;
+}
+
+.winelist h3 {
+    margin: 0;
+}
