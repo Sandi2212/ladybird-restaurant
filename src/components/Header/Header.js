@@ -34,9 +34,6 @@ class Header extends Component {
                     </ul>
                 </nav>
                 <div>
-                    {/* <a href="http://www.ladybirdny.com/reserve">
-                        <button className="button">BOOK NOW</button>
-                    </a> */}
                     <ReserveButton />
                 </div>
             </header>
