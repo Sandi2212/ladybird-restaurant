@@ -19,8 +19,7 @@
 
 .menus_titles {
   display: flex;
-  text-align: center;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   margin: 0 auto;
 }
