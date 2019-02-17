@@ -4,32 +4,25 @@ class  Cocktails extends Component{
     constructor(){
         super()
         this.state={
-            allCocktails:null
-        
+            allCocktails:null 
+        }
     }
-}
 
-getCocktailsData = async () => {
-    await axios.get("http://localhost:5000/cocktails").then(response => {
-     
-        const allCocktails = response.data;
+    getCocktailsData = async () => {
+        const resp = await axios.get("/cocktails")
+        const allCocktails = resp.data;
         this.setState({allCocktails});
-    });
     }
     componentDidMount(){
         this.getCocktailsData();
-   
-     }
+    }
   
-render(){
-    return(
+    render(){
+        return(
+            <div className="Cocktails">
 
-
-    <div>
-
-    </div>
-)
-}
-
+            </div>
+        )
+    }
 }
 export default Cocktails
