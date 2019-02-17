@@ -30,21 +30,18 @@ class  Food extends Component{
     getFonduesData = async () => {
         const response = await axios.get("/fondues")
         const allFondues = response.data;
-        console.log(allFondues)
         this.setState({allFondues});
     }
 
     getDessertsData = async () => {
         const response = await axios.get("/desserts")
         const allDesserts = response.data;
-        console.log(allDesserts)
         this.setState({allDesserts});
     }
 
     getFoodsData = async () => {
         const response = await axios.get("/foods")
         const allFoods = response.data;
-        console.log(allFoods)
         this.setState({allFoods});
     }
   
