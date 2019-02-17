@@ -34,7 +34,6 @@
 .menus__active {
   opacity: 1;
   transition: opacity .5s;
-  /* animation: fade-in .5s linear; */
 }
 
 .menus__active-leaving {
