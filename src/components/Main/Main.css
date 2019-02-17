@@ -29,9 +29,3 @@
   width: 100vw;
   height: 100vh;
 }
-.sticky-side-door{
-  height: 800px;
-  width: 50%;
-  position: sticky;
-  overflow: hidden;
-}
