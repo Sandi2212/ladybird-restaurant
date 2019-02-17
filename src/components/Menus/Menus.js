@@ -41,9 +41,9 @@ class Menus extends Component {
           <div className="Menus">
               <h1 className="menus_header">MENUS</h1>
               <div className="menus_titles">
-                  <h1 id="food" className="menus__link" onClick={this.handleClick}>Food</h1>
-                  <h1 id="cocktails" className="menus__link" onClick={this.handleClick}>Cocktails</h1>
-                  <h1 id="wine" className="menus__link" onClick={this.handleClick}>Wine</h1>
+                  <h1 id="food" className={`menus__link ${activeMenu === 'food' && 'menus__link--active'}`} onClick={this.handleClick}>Food</h1>
+                  <h1 id="cocktails" className={`menus__link ${activeMenu === 'cocktails' && 'menus__link--active'}`} onClick={this.handleClick}>Cocktails</h1>
+                  <h1 id="wine" className={`menus__link ${activeMenu === 'wine' && 'menus__link--active'}`} onClick={this.handleClick}>Wine</h1>
               </div>
               <div className={`menus__active ${menuIsLeaving ? 'menus__active-leaving' : null}`}>
                 {renderActiveMenu(activeMenu)}
