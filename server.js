@@ -35,7 +35,6 @@ require("./routes/fondue")(app);
 require("./routes/food")(app);
 require("./routes/wine")(app);
 
-
 app.listen(PORT, () => {
     console.log(`Express server is listening on port ${PORT}`);
 });

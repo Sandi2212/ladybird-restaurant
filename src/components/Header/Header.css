@@ -1,0 +1,37 @@
+header button {
+    padding: 10px 25px;
+}
+
+.nav-bar li {
+    font-family: JosefinSans;
+    font-size: 23px;
+    font-weight: bold;
+    color: #ffffff;
+    list-style: none;
+    padding: 0px 10px;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+header {
+    background: #2d664e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header img {
+    width: 69px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    opacity: 0.7;
+}
