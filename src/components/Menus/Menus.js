@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import axios from "axios"
 import Food from "./Food/Food"
 import Wine from "./Wine/Wine"
 import Cocktails from "./Cocktails/Cocktails"
