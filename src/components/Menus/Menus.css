@@ -30,9 +30,13 @@
   border-bottom: 7px solid transparent;
   font-size: 37px;
   padding: 0;
-  transition: border-bottom .5s;
+  transition: border-bottom .5s, opacity .3s;
   display: inline-block;
   line-height: 1em;
+}
+
+.menus__link:hover {
+  opacity: .7;
 }
 
 .menus__link--active {
