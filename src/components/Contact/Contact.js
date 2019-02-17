@@ -18,7 +18,7 @@ import ReserveButton from '../ReserveButton/ReserveButton'
             <br />
           </p>
         </div>
-        <div className="contacts__section">
+        <div className="contacts__section"> 
           <h4 className="contacts__section-heading">Hours</h4>
           <span className="contacts__strong">Sunday - Thursday</span>
           <br />

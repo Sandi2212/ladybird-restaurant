@@ -14,14 +14,14 @@ const About = props => {
           <p>Ravi traveled around the world as an artist and painter, 
           before returning to his native New York City and taking 
           the nightlife world by storm. He created a mini-empire of 
-          world renowned cocktail lounges and bars, <p1>including Death 
+          world renowned cocktail lounges and bars, <span className="Ravi-DeRossi_travel span">including Death 
           &amp; Company, The Bourgeois Pig,Proletariat, Cienfuegos, 
-          Mayahuel, Amor y Amargo</p1> and <p1>124 Rabbit Club.</p1> 
+          Mayahuel, Amor y Amargo</span> and <span className="Ravi-DeRossi_travel span">124 Rabbit Club.</span> 
           </p>
          <p>
           He then established himself as a rising star on the culinary 
-          scene with the acclaimed seafood hotspots <p1>Desnuda</p1> and 
-          <p1>Bergen Hill. Mother of Pearl</p1>brings together these two 
+          scene with the acclaimed seafood hotspots <span className="Ravi-DeRossi_travel span">Desnuda</span> and 
+          <span className="Ravi-DeRossi_travel span">Bergen Hill. Mother of Pearl</span>brings together these two 
           worlds and is his first hybrid restaurant and cocktail bar. 
           Avant garden, an upscale vegan restaurant. A lifelong 
           animal lover, ravi has launched non-profit beast, which will 
