@@ -8,19 +8,27 @@ class Menus extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeMenu: 'food'
+            activeMenu: 'food',
+            menuIsLeaving: false,
         }
     }
 
-    handleClick = (e) => {
+    handleClick = async (e) => {
       const activeMenu = e.target.id
       if (!['wine', 'food', 'cocktails'].includes(activeMenu)) {return null;}
-      this.setState({activeMenu})
+      await this.setState({menuIsLeaving: true})
+      setTimeout(() => {
+        this.setState({
+          activeMenu: activeMenu,
+          menuIsLeaving: false
+        })
+      }, 500)
     }
 
     render() {
+      const menuIsLeaving = this.state.menuIsLeaving
       const activeMenu = this.state.activeMenu
-      const renderActiveMenue = (selectedMenu) => {
+      const renderActiveMenu = (selectedMenu) => {
         if (selectedMenu === 'food') {
           return <Food />
         } else if (selectedMenu === 'wine') {
@@ -37,7 +45,9 @@ class Menus extends Component {
                   <h1 id="cocktails" className="menus__link" onClick={this.handleClick}>Cocktails</h1>
                   <h1 id="wine" className="menus__link" onClick={this.handleClick}>Wine</h1>
               </div>
-              {renderActiveMenue(activeMenu)}
+              <div className={`menus__active ${menuIsLeaving ? 'menus__active-leaving' : null}`}>
+                {renderActiveMenu(activeMenu)}
+              </div>
           </div>
       )
     }
