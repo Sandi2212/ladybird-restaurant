@@ -37,7 +37,7 @@ class Header extends Component {
                     </ul>
                 </nav>
                 <div>
-                    <ReserveButton />
+                    <ReserveButton text="Book Now" />
                 </div>
             </header>
         );
