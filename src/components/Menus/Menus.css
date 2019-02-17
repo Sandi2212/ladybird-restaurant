@@ -19,7 +19,7 @@
 
 .menus_titles {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: row wrap;
   text-align: center;
   margin: 0 auto 40px;
