@@ -19,9 +19,8 @@
 
 .menus_titles {
   display: flex;
+  justify-content: space-around;
   flex-flow: row wrap;
-  text-align: center;
-  justify-content: space-between;
   text-align: center;
   margin: 0 auto 40px;
 }
