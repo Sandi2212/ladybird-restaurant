@@ -1,6 +1,7 @@
 .ReserveButton {
     background-color: #e29f93;
     padding: 13px 46px 9px;
+    display: block;
     border-radius: 23px;
     font-size: 20px;
     font-weight: bold;
@@ -9,7 +10,7 @@
     text-transform: uppercase;
     text-decoration: none;
     transition: all .3s;
-    cursor: pointer; 
+    cursor: pointer;
   }
   .ReserveButton:hover {
     background-color: rgba(226,159,147, .7);

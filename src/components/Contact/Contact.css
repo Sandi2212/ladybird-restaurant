@@ -1,51 +1,65 @@
 .Contact {
-    background-color: #ffffff;
-    padding: 25px;
-    min-height: 100vh;
-    width: 50vw;
-    color: #252525;
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 20px;
-  }
-  
-  .contacts__heading {
-    font-size: 40px;
-    font-weight: bold;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  
-  .contacts__section-heading {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
-    text-transform: uppercase;
-   
-  }
-  .Contacts__section-content{
-    margin: 0;
-    font-weight: 300;
-  }
-  
-  .contacts__strong {
-    font-weight: 600;
-  }
-.Rectangle{
-    width: 100px;
-    height: 8px;
-    background-color:#e29f93
+  min-height: 100vh;
+  width: 50vw;
+  padding: 45px;
+  background-color: #ffffff;
+  color: #252525;
+  text-align: center;
+  font-size: 20px;  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
-.contacts__link{
+
+.contact__section {
+  margin: 15px 0;
+}
+  
+.contact__heading {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.contact__section-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+}
+
+.contact__section-content{
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.contact__strong {
+  font-weight: 600;
+}
+
+.contact__rectangle{
+  width: 100px;
+  height: 8px;
+  background-color: #e29f93;
+  margin: 30px auto 50px;
+}
+
+.contact__link{
   font-weight: 300;
   text-decoration: none;
   transition: all .3s;
   opacity: 1;
   color: black;
 }
-.contacts__link:hover {
+
+.contact__link:hover {
   opacity: .7;
+}
+
+.contact__section--final {
+  margin-bottom: 42px;
 }

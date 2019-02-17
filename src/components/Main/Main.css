@@ -1,37 +1,32 @@
 .page-section {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-flow: row nowrap;
-  position: relative;
-  animation: fade-in .7s linear;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    animation: fade-in 0.7s linear;
 }
 
 .sticky-side {
-  height: 100vh;
-  width: 50%;
-  position: sticky;
-  overflow: hidden;
+    height: 100vh;
+    width: 50%;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
 
 .sticky-side img {
-  height: auto;
-  min-height: 100vh;
-  width: 100%;
-  min-width: 75vh;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    min-width: 75vh;
 }
 
 .full-screen-image {
-  background-image: url(/assets/cocktail-6/ladybird-cocktail-6.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-  height: 100vh;
-}
-.sticky-side-door{
-  height: 800px;
-  width: 50%;
-  position: sticky;
-  overflow: hidden;
+    background-image: url(/assets/cocktail-6/ladybird-cocktail-6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
 }

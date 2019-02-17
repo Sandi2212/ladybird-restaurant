@@ -14,16 +14,15 @@ const About = props => {
           <p>Ravi traveled around the world as an artist and painter, 
           before returning to his native New York City and taking 
           the nightlife world by storm. He created a mini-empire of 
-          world renowned cocktail lounges and bars, <span className="Ravi-DeRossi_travel span">including Death 
-          &amp; Company, The Bourgeois Pig,Proletariat, Cienfuegos, 
-          Mayahuel, Amor y Amargo</span> and <span className="Ravi-DeRossi_travel span">124 Rabbit Club.</span> 
+          world renowned cocktail lounges and bars, including <a className="about__link" href="https://www.deathandcompany.com/" target="_blank" rel="noopener noreferrer">Death 
+          &amp; Company</a>, The Bourgeois Pig, <a className="about__link" href="https://www.proletariatny.com/" target="_blank" rel="noopener noreferrer">Proletariat</a>, Cienfuegos, 
+          Mayahuel, <a className="about__link" href="https://www.amoryamargony.com/" target="_blank" rel="noopener noreferrer">Amor y Amargo</a> and 124 Rabbit Club.
           </p>
          <p>
           He then established himself as a rising star on the culinary 
-          scene with the acclaimed seafood hotspots <span className="Ravi-DeRossi_travel span">Desnuda</span> and 
-          <span className="Ravi-DeRossi_travel span">Bergen Hill. Mother of Pearl</span>brings together these two 
-          worlds and is his first hybrid restaurant and cocktail bar. 
-          Avant garden, an upscale vegan restaurant. A lifelong 
+          scene with the acclaimed seafood hotspots <a className="about__link" href="https://www.desnudawbk.com/" target="_blank" rel="noopener noreferrer">Desnuda</a> and 
+          Bergen Hill. <a className="about__link" href="https://www.motherofpearlnyc.com/" target="_blank" rel="noopener noreferrer">Mother of Pearl</a> brings together these two 
+          worlds and is his first hybrid restaurant and cocktail bar. <a className="about__link" href="https://www.avantgardennyc.com/" target="_blank" rel="noopener noreferrer">Avant garden</a>, an upscale vegan restaurant. A lifelong 
           animal lover, ravi has launched non-profit beast, which will 
           hold fundraising parties to improve animal lives.
         </p>
