@@ -20,8 +20,9 @@
 .menus_titles {
   display: flex;
   justify-content: space-around;
+  flex-flow: row wrap;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 .menus__link {
@@ -32,6 +33,7 @@
   transition: border-bottom .5s, opacity .3s;
   display: inline-block;
   line-height: 1em;
+  margin: 0;
 }
 
 .menus__link:hover {
