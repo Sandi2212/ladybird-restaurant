@@ -7,36 +7,32 @@ class  Wine extends Component{
         this.state={
             allWine:null,
             allBeer:null
-        
+        }
     }
-}
 
-getWineData = async () => {
-    await axios.get("http://localhost:5000/wines").then(response => {
-      const allWine = response.data;
-      this.setState({allWine});
-    });
- }
-getBeerData = async () => {
-    await axios.get("http://localhost:5000/beers").then(response => {
-      const allBeer = response.data;
-      this.setState({allBeer});
-    });
- }
- componentDidMount(){
-    this.getWineData();
-    this.getBeerData();
- }
+    getWineData = async () => {
+        const response = await axios.get("/wines")
+        const allWine = response.data;
+        this.setState({allWine});
+    }
+    
+    getBeerData = async () => {
+        const response = await axios.get("/beers")
+        const allBeer = response.data;
+        this.setState({allBeer});
+    }
+    
+    componentDidMount(){
+        this.getWineData();
+        this.getBeerData();
+    }
 
-render(){
-    return(
-
-
-    <div>
-
-    </div>
-)
-}
-
+    render(){
+        return(
+            <div className="Wine">
+                <h1>Wine Component</h1>
+            </div>
+        )
+    }
 }
 export default Wine
