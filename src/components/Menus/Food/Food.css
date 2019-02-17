@@ -1,6 +1,5 @@
 .oc-food-component{
-  width: 500px;
-  height: 672px;
+  width: 100%;
   font-family: "Josefin Sans";
   font-size: 17px;
   font-weight: 300;
@@ -9,8 +8,6 @@
   line-height: normal;
   letter-spacing: normal;
   color:#252525;
-  overflow: scroll;
-  margin-left: 50px;
   margin-top: 30px;
 }
 
@@ -29,8 +26,8 @@
 
 .oc-food-item-header{
     font-family: "Josefin Sans";
-    font-size: 37px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 550;
 }
 
 .oc-food-item-price{
@@ -48,7 +45,7 @@
     font-family: "Josefin Sans";
     font-weight: 300;
     font-size: 20px;
-    margin-top: -40px;
+    margin-top: -30px;
     letter-spacing: 0px;
 }
 
