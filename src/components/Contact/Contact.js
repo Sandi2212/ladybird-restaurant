@@ -2,7 +2,7 @@ import React from "react"
 import './Contact.css'
 import ReserveButton from '../ReserveButton/ReserveButton'
 
-const Contact = () =>{
+const Contact = () => {
   return(
     <div className="Contact">
       <div><h2 className="contact__heading">CONTACT</h2></div>
@@ -47,5 +47,5 @@ const Contact = () =>{
     </div>
   )
 }
-    
-    export default Contact
+
+export default Contact
