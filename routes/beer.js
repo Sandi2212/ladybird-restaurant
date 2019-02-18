@@ -30,7 +30,7 @@ module.exports = app => {
         }
     });
 
-    app.put("beers/:id", ensureAuthenticated, async (req, res) => {
+    app.put("/beers/:id", ensureAuthenticated, async (req, res) => {
         try {
             const beerToUpdate = await Beer.findByPk(req.params.id);
             await beerToUpdate.update(req.body);
@@ -43,7 +43,7 @@ module.exports = app => {
         }
     });
 
-    app.delete("beers/:id", ensureAuthenticated, async (req, res) => {
+    app.delete("/beers/:id", ensureAuthenticated, async (req, res) => {
         try {
             const beerToRemove = await Beer.findByPk(req.params.id);
             await beerToRemove.destroy();

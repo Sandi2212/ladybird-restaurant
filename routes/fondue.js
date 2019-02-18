@@ -30,7 +30,7 @@ module.exports = app => {
         }
     });
 
-    app.put("fondues/:id", ensureAuthenticated, async (req, res) => {
+    app.put("/fondues/:id", ensureAuthenticated, async (req, res) => {
         try {
             const fondueToUpdate = await Fondue.findByPk(req.params.id);
             await fondueToUpdate.update(req.body);
@@ -43,7 +43,7 @@ module.exports = app => {
         }
     });
 
-    app.delete("fondues/:id", ensureAuthenticated, async (req, res) => {
+    app.delete("/fondues/:id", ensureAuthenticated, async (req, res) => {
         try {
             const fondueToRemove = await Fondue.findByPk(req.params.id);
             await fondueToRemove.destroy();

@@ -6,10 +6,12 @@ const app = express();
 const passport = require("passport");
 const keys = require("./config/keys");
 const cookieSession = require("cookie-session");
+const cors = require("cors");
 require("./services/passport");
 
 app.use(bodyParser.json());
 app.use(morgan("dev"));
+app.use(cors());
 // configuration object is passed to cookie session
 // configuration object expexcts 2 diff properties
 // maxAge how long cookie can exist in browser before autamatically expiring

@@ -13,7 +13,17 @@ class Food extends Component {
         };
     }
 
-    renderFoodData = foodData =>
+    deleteItem = async (itemId, foodType) => {
+        let url = `/${foodType}/${itemId}`;
+        const response = await axios.delete(url);
+        if (response.data) {
+            this.getFoodsData();
+            this.getDessertsData();
+            this.getFonduesData();
+        }
+    };
+
+    renderFoodData = (foodData, foodType) =>
         foodData.map((foodItem, index) => (
             <div key={index} className="oc-food-item">
                 <h3 className="oc-food-item-title">
@@ -23,6 +33,21 @@ class Food extends Component {
                             ? foodItem.price + "/EA"
                             : foodItem.price}
                     </span>
+                    {this.props.chefLoggedOn ? (
+                        <span>
+                            <a href="#oc-edit-item-modal">
+                                <button className="oc-crud-button">Edit</button>
+                            </a>
+                            <button
+                                className="oc-crud-button"
+                                onClick={() => {
+                                    this.deleteItem(foodItem.id, foodType);
+                                }}
+                            >
+                                Delete
+                            </button>
+                        </span>
+                    ) : null}
                 </h3>
                 <p className="oc-food-item-ingredients">
                     {" "}
@@ -57,12 +82,14 @@ class Food extends Component {
 
     render() {
         const foods =
-            this.state.allFoods && this.renderFoodData(this.state.allFoods);
+            this.state.allFoods &&
+            this.renderFoodData(this.state.allFoods, "foods");
         const fondues =
-            this.state.allFondues && this.renderFoodData(this.state.allFondues);
+            this.state.allFondues &&
+            this.renderFoodData(this.state.allFondues, "fondues");
         const desserts =
             this.state.allDesserts &&
-            this.renderFoodData(this.state.allDesserts);
+            this.renderFoodData(this.state.allDesserts, "desserts");
         return (
             <div className="oc-food-component">
                 {foods}
@@ -84,6 +111,47 @@ class Food extends Component {
                         server
                     </span>
                 </p>
+                <div id="oc-edit-item-modal" className="oc-modal">
+                    <a href="#close" title="close" className="oc-close">
+                        X
+                    </a>
+                    <form>
+                        <label className="oc-input-label">
+                            Dish
+                            <br />
+                            <input
+                                className="oc-input"
+                                name=""
+                                placeholder="Name of the Dish"
+                                type="text"
+                            />
+                        </label>
+                        <br />
+                        <label className="oc-input-label">
+                            Price
+                            <br />
+                            <input
+                                className="oc-input"
+                                name=""
+                                placeholder="Price of the Dish"
+                                type="text"
+                            />
+                        </label>
+                        <br />
+                        <label className="oc-input-label">
+                            Ingredients
+                            <br />
+                            <input
+                                className="oc-input"
+                                name=""
+                                placeholder="List of the Ingredients"
+                                type="text"
+                            />
+                        </label>
+                        <br />
+                        <button>Submit</button>
+                    </form>
+                </div>
             </div>
         );
     }

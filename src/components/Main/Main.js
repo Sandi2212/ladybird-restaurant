@@ -35,7 +35,7 @@ const Main = props => {
                         alt="ladybird napkin"
                     />
                 </div>
-                <Menus />
+                <Menus chefLoggedOn={props.chefLoggedOn} />
             </div>
             <div id="about" className="page-section">
                 <About />
