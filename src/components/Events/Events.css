@@ -49,3 +49,9 @@
 .events__link:hover {
   opacity: .7;
 }
+@media (max-width: 500px) {      
+  .Events{
+    width: 100vw;
+  }
+}
+  
