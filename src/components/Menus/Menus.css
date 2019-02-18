@@ -56,5 +56,12 @@
   .Menus{
     width: 100vw;
   }
+  .menus_header{
+    font-size: 30px;
+
+  }.menus__link{
+    font-size: 20px;
+
+  }
 }
   

@@ -47,3 +47,10 @@
 .home__image-holder, .home__address, .home__hours, .home__phone {
   margin: 10px;
 }
+@media (max-width: 500px) {      
+  .Home{
+    font-size: 14px;
+  }
+  
+}
+  
