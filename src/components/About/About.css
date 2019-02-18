@@ -67,7 +67,9 @@
 }
 @media (max-width: 500px) {      
     .About{
-      width: 90vw;
+      width: 100vw;
+      padding:30px 15px;
     }
+
   }
     
