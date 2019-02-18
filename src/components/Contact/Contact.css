@@ -63,3 +63,9 @@
 .contact__section--final {
   margin-bottom: 42px;
 }
+@media (max-width: 500px) {      
+  .Contact{
+    width: 100vw;
+  }
+}
+  
