@@ -21,7 +21,7 @@ app.use(morgan("dev"));
 app.use(
     cookieSession({
         maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days in milliseconds
-        keys: [keys.cookieKey]
+        keys: [process.env.COOKIE_KEY || keys.cookieKey]
     })
 );
 //telling passport to use cookies to authenticate user
@@ -41,7 +41,7 @@ require("./routes/wine")(app);
 
 // In production, any request that doesn't match a previous route
 // should send the front-end application, which will handle the route.
-if (process.env.NODE_ENV == "production") {
+if (process.env.NODE_ENV === "production") {
   app.get("/*", function(request, response) {
     response.sendFile(path.join(__dirname, "build", "index.html"));
   });
