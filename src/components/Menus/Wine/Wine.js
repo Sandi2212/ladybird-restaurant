@@ -7,10 +7,7 @@ class Wine extends Component {
         super();
         this.state = {
             allWine: null,
-            allBeer: null,
-            whiteWine: null,
-            redWine: null,
-            rose: null
+            allBeer: null
         };
     }
 
@@ -126,14 +123,12 @@ class Wine extends Component {
     getWineData = async () => {
         const response = await axios.get("/wines");
         const allWine = response.data;
-        console.log(allWine);
         this.setState({ allWine });
     };
 
     getBeerData = async () => {
         const response = await axios.get("/beers");
         const allBeer = response.data;
-        console.log(allBeer);
         this.setState({ allBeer });
     };
 
