@@ -4,7 +4,13 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const app = express();
 const passport = require("passport");
-const keys = require("./config/keys");
+const keys = (() => {
+  try {
+    return require("../config/keys")
+  } catch (e) {
+    return null
+  }
+})()
 const cookieSession = require("cookie-session");
 const path = require('path');
 require("./services/passport");

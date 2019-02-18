@@ -1,6 +1,12 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const keys = require("../config/keys");
+const keys = (() => {
+  try {
+    return require("../config/keys")
+  } catch (e) {
+    return null
+  }
+})()
 const { User } = require("../models/index");
 
 // console.developers.google.com;
