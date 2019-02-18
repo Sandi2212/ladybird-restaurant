@@ -25,12 +25,17 @@ class  Cocktails extends Component{
 	    return cocktail.alcohol_free === false
         }).map(cocktail => {
 	    return (
-		<div className="cocktails__row" key={cocktail.id}>
-            <h4>{cocktail.name} <span className="cocktail__price">
-            {cocktail.small_price}
-             { cocktail.large_price ? `/ ${cocktail.large_price}` : null }
-            </span></h4>
-			<p>{cocktail.ingredients}</p>
+		<div className="cocktails_list" key={cocktail.id}>
+                    <h4 className="cocktails_title">{cocktail.name} 
+                    <span className="cocktails_price">
+                    {cocktail.small_price}
+                    {cocktail.small_price &&  cocktail.large_price && ' / ' }
+                    {cocktail.large_price || ''}
+                    </span>
+                    </h4>
+                    <p className="cocktails_ingredient">
+                    {cocktail.ingredients}
+                    </p>
                </div>
         )
         })  
@@ -39,19 +44,25 @@ class  Cocktails extends Component{
             return cocktail.alcohol_free === true
             }).map(cocktail => {
             return (
-                <div className="cocktails__row" key={cocktail.id}>
-                    <h4>{cocktail.name} <span className="cocktail__price">
+                <div className="cocktails_list" key={cocktail.id}>
+                    <h4 className="cocktails_title">
+                    {cocktail.name}
+                    <span className="cocktails_price">
                     {cocktail.small_price}
-                    { cocktail.large_price ? `/ ${cocktail.large_price}` : null }
-                    </span></h4>
-                    <p>{cocktail.ingredients}</p>
+                    {cocktail.small_price &&  cocktail.large_price && ' / ' }
+                    {cocktail.large_price || ''} 
+                    </span>
+                    </h4>
+                    <p className="cocktails_ingredient">
+                    {cocktail.ingredients}
+                    </p>
                 </div>
             )
             })
         return (
-            <div className="Cocktails">
+            <div className="cocktails">
                 {alcoholicCocktails}
-                <h3>Zero Proof</h3>
+                <h3 className="zero_proof">Zero Proof</h3>
                 {alcoholFreeCocktails}
             </div>
         )
