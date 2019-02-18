@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const dbName = "ladybird_db";
 
-const db = new Sequelize({
+const db = new Sequelize(process.env.DATABASE_URL || `postgres://localhost:5000/${dbName}`, {
     database: dbName,
     dialect: "postgres",
     define: {

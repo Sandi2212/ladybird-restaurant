@@ -6,7 +6,11 @@ const app = express();
 const passport = require("passport");
 const keys = require("./config/keys");
 const cookieSession = require("cookie-session");
+const path = require('path');
 require("./services/passport");
+
+// Static hosting for built files
+app.use("/", express.static("./build/"));
 
 app.use(bodyParser.json());
 app.use(morgan("dev"));
@@ -34,6 +38,14 @@ require("./routes/dessert")(app);
 require("./routes/fondue")(app);
 require("./routes/food")(app);
 require("./routes/wine")(app);
+
+// In production, any request that doesn't match a previous route
+// should send the front-end application, which will handle the route.
+if (process.env.NODE_ENV == "production") {
+  app.get("/*", function(request, response) {
+    response.sendFile(path.join(__dirname, "build", "index.html"));
+  });
+}
 
 app.listen(PORT, () => {
     console.log(`Express server is listening on port ${PORT}`);
