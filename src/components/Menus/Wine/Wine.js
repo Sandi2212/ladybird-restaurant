@@ -17,7 +17,7 @@ class Wine extends Component {
                 <h2>{category}</h2>
                 {this.state.allWine
                     .filter(wine => {
-                        return wine.category == category;
+                        return wine.category === category;
                     })
                     .map(whiteWine => {
                         return (
@@ -72,7 +72,7 @@ class Wine extends Component {
                 <h2>{category}</h2>
                 {this.state.allBeer
                     .filter(beer => {
-                        return beer.category == category;
+                        return beer.category === category;
                     })
                     .map(beer => {
                         return (
