@@ -70,3 +70,29 @@
 .footer__social-link {
   text-decoration: none;
 }
+
+@media only screen and (max-width: 500px) {
+  .Footer {
+    flex-direction: column;
+  }
+
+  .footer__links {
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer__nav {
+    display: none;
+  }
+  .footer__social {
+    margin: 27px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__social-item {
+    text-align: center;
+    margin: 0;
+  }
+}
