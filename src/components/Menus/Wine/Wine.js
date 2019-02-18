@@ -14,12 +14,13 @@ class Wine extends Component {
         };
     }
 
-    whiteWines = () => {
+    renderWines = category => {
         return (
-            <div className="white-wine">
+            <div className="drink-list">
+                <h2>{category}</h2>
                 {this.state.allWine
                     .filter(wine => {
-                        return wine.category == "white";
+                        return wine.category == category;
                     })
                     .map(whiteWine => {
                         return (
@@ -28,22 +29,91 @@ class Wine extends Component {
                                     <div>
                                         <h3 className="drink-title">
                                             {whiteWine.varietal}
-                                            <span>
-                                                {whiteWine.glass_price
+                                            <span className="price">
+                                                {whiteWine.glass_price &&
+                                                whiteWine.bottle_price
                                                     ? `${
                                                           whiteWine.glass_price
                                                       } / ${
                                                           whiteWine.bottle_price
                                                       }`
-                                                    : whiteWine.bottle_price}
+                                                    : whiteWine.bottle_price ||
+                                                      whiteWine.bottle_price}
                                             </span>
                                         </h3>
 
-                                        <span>{whiteWine.vineyard}</span>
-                                        <br />
-                                        <span>
-                                            {whiteWine.region} /{whiteWine.year}
-                                        </span>
+                                        <p>
+                                            {whiteWine.vineyard
+                                                ? `${whiteWine.vineyard}`
+                                                : ""}
+                                            {whiteWine.region &&
+                                            whiteWine.vineyard
+                                                ? ` / `
+                                                : ""}
+                                            {whiteWine.region
+                                                ? `${whiteWine.region}`
+                                                : ""}
+                                            {whiteWine.region && whiteWine.year
+                                                ? ` / `
+                                                : ""}
+                                            {whiteWine.year
+                                                ? whiteWine.year
+                                                : ""}
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        );
+                    })}
+            </div>
+        );
+    };
+
+    renderBeer = category => {
+        return (
+            <div className="drink-list">
+                <h2>{category}</h2>
+                {this.state.allBeer
+                    .filter(beer => {
+                        return beer.category == category;
+                    })
+                    .map(beer => {
+                        return (
+                            <ul key={beer.id}>
+                                <li className="winelist">
+                                    <div>
+                                        <h3 className="drink-title">
+                                            {beer.name}
+                                            <span className="price">
+                                                {beer.price}
+                                            </span>
+                                        </h3>
+
+                                        <p>
+                                            {beer.brewery
+                                                ? `${beer.brewery}`
+                                                : ""}
+                                            {beer.region && beer.brewery
+                                                ? ` / `
+                                                : ""}
+                                            {beer.region
+                                                ? `${beer.region}`
+                                                : ""}
+                                            {beer.container && beer.region
+                                                ? ` / `
+                                                : ""}
+                                            {beer.container
+                                                ? beer.container
+                                                : ""}
+                                            {beer.oz && beer.container
+                                                ? ` / `
+                                                : ""}
+                                            <span className="beer-oz">
+                                                {beer.oz ? `${beer.oz} oz` : ""}
+                                            </span>
+                                            {beer.abv && beer.oz ? ` / ` : ""}
+                                            {beer.abv ? `${beer.abv}%` : ""}
+                                        </p>
                                     </div>
                                 </li>
                             </ul>
@@ -74,7 +144,16 @@ class Wine extends Component {
 
     render() {
         return this.state.allWine && this.state.allBeer ? (
-            <div className="wines">{this.whiteWines()}</div>
+            <div className="wines">
+                {this.renderWines("white")}
+                {this.renderWines("rose")}
+                {this.renderWines("red")}
+                {this.renderWines("bubbles")}
+                {this.renderWines("dessert wine")}
+                {this.renderBeer("beer")}
+                {this.renderBeer("boozy kombucha")}
+                {this.renderBeer("cider")}
+            </div>
         ) : (
             "Loading"
         );

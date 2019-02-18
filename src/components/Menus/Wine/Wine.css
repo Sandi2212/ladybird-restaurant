@@ -1,27 +1,38 @@
-.drink-title,
-.drink-price {
+.winelist p {
+    text-transform: capitalize;
+    font-size: 17px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    margin: 0px;
+}
+
+.drink-title {
     text-transform: uppercase;
-    font-weight: bold;
-    font-family: "JosefinSans-SemiBold", sans-serif;
     font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+.winelist .price {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+    margin: 0;
 }
 
 .drink-title span {
     padding-left: 20px;
-}
-
-.wines {
-    font-family: JosefinSans;
+    font-weight: 500;
 }
 
 .wines li {
     list-style: none;
 }
 
-.wines span {
-    text-transform: capitalize;
-    font-size: 17px;
-    font-family: "JosefinSans-Light", sans-serif;
+.wines ul {
+    padding: 0;
 }
 
 .winelist {
@@ -30,4 +41,21 @@
 
 .winelist h3 {
     margin: 0;
+}
+
+.winelist h2 {
+    font-family: "JosefinSans-SemiBold", sans-serif;
+    font-size: 37px;
+}
+
+.wines h2 {
+    text-transform: uppercase;
+}
+
+.beer-oz {
+    text-transform: lowercase;
+}
+
+.drink-list {
+    padding-bottom: 35px;
 }
