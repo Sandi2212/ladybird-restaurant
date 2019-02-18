@@ -30,7 +30,7 @@ module.exports = app => {
         }
     });
 
-    app.put("desserts/:id", ensureAuthenticated, async (req, res) => {
+    app.put("/desserts/:id", ensureAuthenticated, async (req, res) => {
         try {
             const dessertToUpdate = await Dessert.findByPk(req.params.id);
             await dessertToUpdate.update(req.body);
@@ -43,7 +43,7 @@ module.exports = app => {
         }
     });
 
-    app.delete("desserts/:id", ensureAuthenticated, async (req, res) => {
+    app.delete("/desserts/:id", ensureAuthenticated, async (req, res) => {
         try {
             const dessertToRemove = await Dessert.findByPk(req.params.id);
             await dessertToRemove.destroy();
