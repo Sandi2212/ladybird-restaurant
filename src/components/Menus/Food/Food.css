@@ -1,0 +1,73 @@
+.oc-food-component{
+  width: 100%;
+  font-family: "Josefin Sans";
+  font-size: 17px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color:#252525;
+  margin-top: 30px;
+}
+
+.oc-food-item{
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+}
+
+.oc-food-item-title{
+    font-family: "Josefin Sans";
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin:0;
+}
+
+.oc-food-item-header{
+    font-family: "Josefin Sans";
+    font-size: 30px;
+    font-weight: 550;
+}
+
+.oc-food-item-price{
+    margin-left:25px;
+}
+
+.oc-food-item-ingredients{
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    font-size: 17px;
+    margin:0;
+}
+
+.oc-fondue-info{
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: -30px;
+    letter-spacing: 0px;
+}
+
+.oc-menu-note{
+    font-size: 17px;
+    letter-spacing: 0px;
+    color:#252525;
+    font-style: italic;
+}
+
+.oc-menu-note-label{
+    font-family: "Josefin Sans";
+    font-weight: bold    
+}
+
+.oc-menu-note-colon{
+    font-family: "Josefin Sans";
+    font-weight: 400;
+}
+
+.oc-menu-note-message{
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    font-style: italic;
+}
