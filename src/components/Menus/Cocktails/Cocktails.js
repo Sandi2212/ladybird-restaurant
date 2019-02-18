@@ -35,6 +35,38 @@ class  Cocktails extends Component{
                   })
               }
             </div>
+                    <div className="Cocktails">
+                    {
+                        allCocktails.filter(cocktail=> cocktail.alcohol_free === false).map(cocktail => {
+                            return (
+                            <div key={cocktail.id}>
+                            <span><h2>{ cocktail.name }</h2></span>
+                            <span>{ cocktail.small_price } { cocktail.large_price ? `/ ${cocktail.large_price}` : '' }</span>
+                            <div>{ cocktail.ingredients } </div>
+                            </div>
+                            )
+                        })
+                    }
+                    </div>
+
+                    <div className="Cocktails">
+                    {
+                        allCocktails.filter(cocktail=> cocktail.alcohol_free === true).map(cocktail => {
+                            return (
+                            <div key={cocktail.id}>
+                            <span><h2>{ cocktail.name }</h2></span>
+                            <span>{ cocktail.small_price } { cocktail.large_price ? `/ ${cocktail.large_price}` : '' }</span>
+                            <div>{ cocktail.ingredients } </div>
+                            </div>
+                            )
+                        })
+                    }
+                    </div>
+
+    
+
+
+
         )
     }
 }
