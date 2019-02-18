@@ -16,6 +16,6 @@
 @media (max-width: 500px) {  
       
   .Blurb{
-    width: auto;
+    width: 100vw;
   }
 }
