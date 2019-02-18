@@ -1,5 +1,7 @@
-import React , {Component} from "react"
-import axios from "axios"
+import React , {Component} from "react";
+import axios from "axios";
+import "./Cocktails.css";
+
 class  Cocktails extends Component{
     constructor(){
         super()
@@ -18,55 +20,40 @@ class  Cocktails extends Component{
     }
   
     render(){
-        const { allCocktails } = this.state;
+        const allCocktails = this.state.allCocktails
+        const alcoholicCocktails = allCocktails.filter(cocktail => {
+	    return cocktail.alcohol_free === false
+        }).map(cocktail => {
+	    return (
+		<div className="cocktails__row" key={cocktail.id}>
+            <h4>{cocktail.name} <span className="cocktail__price">
+            {cocktail.small_price}
+             { cocktail.large_price ? `/ ${cocktail.large_price}` : null }
+            </span></h4>
+			<p>{cocktail.ingredients}</p>
+               </div>
+        )
+        })  
 
-        console.log("STATE", this.state);
-        return(
+        const alcoholFreeCocktails = allCocktails.filter(cocktail => {
+            return cocktail.alcohol_free === true
+            }).map(cocktail => {
+            return (
+                <div className="cocktails__row" key={cocktail.id}>
+                    <h4>{cocktail.name} <span className="cocktail__price">
+                    {cocktail.small_price}
+                    { cocktail.large_price ? `/ ${cocktail.large_price}` : null }
+                    </span></h4>
+                    <p>{cocktail.ingredients}</p>
+                </div>
+            )
+            })
+        return (
             <div className="Cocktails">
-              {
-                  allCocktails.map(cocktail => {
-                      return (
-                        <div key={cocktail.id}>
-                        <span><h2>{ cocktail.name }</h2></span>
-                        <span>{ cocktail.small_price } { cocktail.large_price ? `/ ${cocktail.large_price}` : '' }</span>
-                        <div>{ cocktail.ingredients } </div>
-                        </div>
-                      )
-                  })
-              }
+                {alcoholicCocktails}
+                <h3>Zero Proof</h3>
+                {alcoholFreeCocktails}
             </div>
-                    // <div className="Cocktails">
-                    // {
-                    //     allCocktails.filter(cocktail=> cocktail.alcohol_free === false).map(cocktail => {
-                    //         return (
-                    //         <div key={cocktail.id}>
-                    //         <span><h2>{ cocktail.name }</h2></span>
-                    //         <span>{ cocktail.small_price } { cocktail.large_price ? `/ ${cocktail.large_price}` : '' }</span>
-                    //         <div>{ cocktail.ingredients } </div>
-                    //         </div>
-                    //         )
-                    //     })
-                    // }
-                    // </div>
-
-                    // <div className="Cocktails">
-                    // {
-                    //     allCocktails.filter(cocktail=> cocktail.alcohol_free === true).map(cocktail => {
-                    //         return (
-                    //         <div key={cocktail.id}>
-                    //         <span><h2>{ cocktail.name }</h2></span>
-                    //         <span>{ cocktail.small_price } { cocktail.large_price ? `/ ${cocktail.large_price}` : '' }</span>
-                    //         <div>{ cocktail.ingredients } </div>
-                    //         </div>
-                    //         )
-                    //     })
-                    // }
-                    // </div>
-
-    
-
-
-
         )
     }
 }
