@@ -59,3 +59,9 @@
 .drink-list {
     padding-bottom: 35px;
 }
+
+.wines {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
