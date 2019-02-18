@@ -30,14 +30,10 @@
     width: 100vw;
     height: 100vh;
 }
-@media (max-width: 500px) {
-Body{
-    background-size: cover;
-}
-    
+@media (max-width: 500px) {   
 .page-section{
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
    
 }
 .sticky-side {
