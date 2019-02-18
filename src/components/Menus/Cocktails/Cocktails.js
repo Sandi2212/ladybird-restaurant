@@ -4,7 +4,7 @@ class  Cocktails extends Component{
     constructor(){
         super()
         this.state={
-            allCocktails:null 
+            allCocktails: [], 
         }
     }
 
@@ -18,9 +18,22 @@ class  Cocktails extends Component{
     }
   
     render(){
+        const { allCocktails } = this.state;
+
+        console.log("STATE", this.state);
         return(
             <div className="Cocktails">
-              <h1>Cocktails component</h1>
+              {
+                  allCocktails.map(cocktail => {
+                      return (
+                        <div key={cocktail.id}>
+                        <span><h2>{ cocktail.name }</h2></span>
+                        <span>{ cocktail.small_price } { cocktail.large_price ? `/ ${cocktail.large_price}` : '' }</span>
+                        <div>{ cocktail.ingredients } </div>
+                        </div>
+                      )
+                  })
+              }
             </div>
         )
     }
