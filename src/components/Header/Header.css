@@ -1,27 +1,44 @@
-header button {
-    padding: 10px 25px;
+.header__menu-button {
+  color: white;
+  display: none;
+  text-align: right;
 }
 
-.nav-bar li {
+.header__nav-bar li {
     font-family: "Josefin Sans", sans-serif;
     font-size: 23px;
     font-weight: bold;
     color: #ffffff;
     list-style: none;
     padding: 0px 10px;
+    text-transform: uppercase;
 }
 
-.nav-bar a {
+.nav-bar__gift-cards {
+  display: none;
+}
+
+.header__nav-bar a {
     transition: all 0.3s;
 }
 
-.nav-bar ul {
+.header__nav-bar ul {
     display: flex;
+}
+
+.header__nav-bar a:hover {
+  opacity: 0.7;
+}
+
+.nav-bar__menus {
+  order: -1;
 }
 
 header {
     position: fixed;
-    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
     background: #2d664e;
     display: flex;
@@ -39,6 +56,53 @@ header a {
     text-decoration: none;
 }
 
-.nav-bar a:hover {
-    opacity: 0.7;
+@media only screen and (max-width: 500px) {
+  header {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 22px;
+  }
+  header img {
+    width: 50px;
+  }
+
+  .header__menu-button {
+    display: block;
+    width: 30px;
+    text-align: center;
+  }
+
+  .header__reserve-wrapper {
+    display: none;
+  }
+
+  .header__nav-bar {
+    height: 0;
+    overflow: hidden;
+    transition: all .5s;
+  }
+
+  .header__nav-bar--visible {
+    height: 25em;
+  }
+
+  .header__nav-bar ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .header__nav-bar li, .nav-bar__gift-cards {
+    display: block;
+    text-transform: capitalize;
+    margin: 1em;
+    text-align: center;
+  }
+
+  .header__logo-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
