@@ -1,6 +1,8 @@
 # Ladybird
 This project is a redesign of the website for New York City restaurant Ladybird.
 
+[Our New Site](https://ladybird-app.herokuapp.com/)
+
 [Their Old Site](http://www.ladybirdny.com/)
 
 ## To Contribute to our project
