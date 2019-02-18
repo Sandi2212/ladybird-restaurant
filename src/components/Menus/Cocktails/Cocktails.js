@@ -28,7 +28,7 @@ class  Cocktails extends Component{
 		<div className="cocktails_list" key={cocktail.id}>
                     <h4 className="cocktails_title">{cocktail.name} 
                     <span className="cocktails_price">
-                    {cocktail.small_price}
+                    {cocktail.small_price || ''}
                     {cocktail.small_price &&  cocktail.large_price && ' / ' }
                     {cocktail.large_price || ''}
                     </span>
@@ -48,7 +48,7 @@ class  Cocktails extends Component{
                     <h4 className="cocktails_title">
                     {cocktail.name}
                     <span className="cocktails_price">
-                    {cocktail.small_price}
+                    {cocktail.small_price || ''}
                     {cocktail.small_price &&  cocktail.large_price && ' / ' }
                     {cocktail.large_price || ''} 
                     </span>
