@@ -65,3 +65,9 @@
 .about__link:hover {
   opacity: .7;
 }
+@media (max-width: 500px) {      
+    .About{
+      width: 90vw;
+    }
+  }
+    
