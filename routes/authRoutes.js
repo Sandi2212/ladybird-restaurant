@@ -15,14 +15,13 @@ module.exports = app => {
         "/auth/google/callback",
         passport.authenticate("google"),
         (req, res) => {
-            res.send(req.user);
+            res.redirect("/");
         }
     );
 
     // this route is to check if there is user session
     app.get("/auth/current_user", (req, res) => {
         res.send(req.user);
-        console.log(req.user);
     });
 
     app.get("/auth/logout", (req, res) => {
