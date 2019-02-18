@@ -69,6 +69,27 @@
     .About{
       width: 100vw;
       padding:30px 15px;
+     
+    }
+    .about_heading {
+      font-size: 30px;
+    }
+    .Ravi-DeRossi_title {
+      font-size: 30px;
+
+    }
+    .Ravi-DeRossi_restaur {
+      font-size: 20px;
+    }
+
+    .Ravi-DeRossi_travel{
+      font-size: 14px;
+      flex-flow: wrap;
+
+    }
+    .about_img {
+      width: 200px;
+      height: 200px;
     }
 
   }
