@@ -1,72 +1,44 @@
 import React, { Component } from "react";
 import ReserveButton from "../ReserveButton/ReserveButton";
 import "./Header.css";
+import { configureAnchors } from "react-scrollable-anchor";
+configureAnchors({ offset: -100, scrollDuration: 100 });
 
 class Header extends Component {
-    constructor() {
-      super()
-      this.state = {
-        menuIsVisible: false,
-      }
-    }
-
     componentDidMount() {
         let { offsetHeight } = this.refs.header;
         this.props.getOffsetHeight(offsetHeight);
     }
 
-    toggleMenuVisible = () => {
-      this.setState(prev => {
-        return {menuIsVisible: !prev.menuIsVisible}
-      })
-    }
-
-    handleMenuClick = (e) => {
-      if (window.innerWidth <= 500) {
-        this.setState({menuIsVisible: false})
-      }
-    }
-
     render() {
-        const mobileLayout = window.innerWidth <= 500
         return (
             <header ref="header">
-                <div className="header__logo-wrapper">
+                <div>
                     <a href="#home">
                         <img
                             src="/assets/logo-trans/logo-trans-header.png"
                             alt="logo"
                         />
                     </a>
-                  <div className="header__menu-button">
-                    {
-                      this.state.menuIsVisible ? 
-                      <i className="fas fa-times fa-2x" onClick={this.toggleMenuVisible}></i> : 
-                      <i className="fas fa-bars fa-2x" onClick={this.toggleMenuVisible}></i>
-                    }
-                  </div>
                 </div>
 
-                <nav className={`header__nav-bar ${this.state.menuIsVisible && mobileLayout ? 'header__nav-bar--visible' : ''}`}>
-                    <ul onClick={this.handleMenuClick}>
+                <nav className="nav-bar">
+                    <ul>
                         <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li className="nav-bar__menus">
-                            <a href="#menus">Menus</a>
+                            <a href="#about">ABOUT</a>
                         </li>
                         <li>
-                            <a href="#events">Events</a>
-                        </li>
-                        <li className="nav-bar__gift-cards">
-                        <a href="http://www.derossiglobal.com/products/giftcertificate/buy" target="_blank" rel="noopener noreferrer">Gift Cards</a>
+                            <a href="#menus">MENUS</a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a href="#events">EVENTS</a>
+                        </li>
+                        <li>
+                            <a href="#contact">CONTACT</a>
                         </li>
                     </ul>
                 </nav>
-                <div className="header__reserve-wrapper">
+                <div>
                     <ReserveButton text="Book Now" />
                 </div>
             </header>

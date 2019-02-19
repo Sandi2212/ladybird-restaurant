@@ -6,6 +6,7 @@ import About from "../About/About";
 import Events from "../Events/Events";
 import Menus from "../Menus/Menus";
 import Contact from "../Contact/Contact";
+import ScrollableAnchor from "react-scrollable-anchor";
 
 const Main = props => {
     return (
@@ -37,15 +38,17 @@ const Main = props => {
                 </div>
                 <Menus />
             </div>
-            <div id="about" className="page-section">
-                <About />
-                <div className="sticky-side">
-                    <img
-                        src="assets/ladybird-door/ladybird-door.png"
-                        alt="ladybird door"
-                    />
+            <ScrollableAnchor id="about">
+                <div className="page-section">
+                    <About />
+                    <div className="sticky-side">
+                        <img
+                            src="assets/ladybird-door/ladybird-door.png"
+                            alt="ladybird door"
+                        />
+                    </div>
                 </div>
-            </div>
+            </ScrollableAnchor>
             <div className="full-screen-image" />
             <div id="events" className="page-section">
                 <div className="sticky-side">
