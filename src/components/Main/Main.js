@@ -13,7 +13,7 @@ const Main = props => {
     return (
         <div className="Main" style={{ paddingTop: `${props.headerOffset}px` }}>
             <ScrollableAnchor id="home">
-                <div id="home" className="page-section">
+                <div className="page-section">
                     <Home />
                     <div className="sticky-side">
                         <img
@@ -33,8 +33,8 @@ const Main = props => {
                 </div>
             </div>
             <ScrollableAnchor id="menus">
-                <div id="menus" className="page-section">
-                    <div className="sticky-side">
+                <div className="page-section">
+                    <div className="sticky-side sticky-side__menus">
                         <img
                             src="/assets/ladybird-napkin/ladybird-napkin.png"
                             alt="ladybird napkin"
@@ -56,8 +56,8 @@ const Main = props => {
             </ScrollableAnchor>
             <div className="full-screen-image" />
             <ScrollableAnchor id="events">
-                <div id="events" className="page-section">
-                    <div className="sticky-side">
+                <div className="page-section">
+                    <div className="sticky-side sticky-side__events">
                         <img
                             src="/assets/cocktail/ladybird-cocktail-2.png"
                             alt="Cocktail"
@@ -67,7 +67,7 @@ const Main = props => {
                 </div>
             </ScrollableAnchor>
             <ScrollableAnchor id="contact">
-                <div id="contact" className="page-section">
+                <div className="page-section">
                     <Contact />
                     <div className="sticky-side">
                         <img
