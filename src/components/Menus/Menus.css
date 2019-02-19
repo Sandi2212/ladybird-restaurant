@@ -55,6 +55,7 @@
 @media (max-width: 500px) {      
   .Menus{
     width: 100vw;
+    padding: 35px 25px;
   }
   .menus_header{
     font-size: 30px;
