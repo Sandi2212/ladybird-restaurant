@@ -30,7 +30,7 @@ module.exports = app => {
         }
     });
 
-    app.put("wines/:id", ensureAuthenticated, async (req, res) => {
+    app.put("/wines/:id", ensureAuthenticated, async (req, res) => {
         try {
             const wineToUpdate = await Wine.findByPk(req.params.id);
             await wineToUpdate.update(req.body);
@@ -43,7 +43,7 @@ module.exports = app => {
         }
     });
 
-    app.delete("wines/:id", ensureAuthenticated, async (req, res) => {
+    app.delete("/wines/:id", ensureAuthenticated, async (req, res) => {
         try {
             const wineToRemove = await Wine.findByPk(req.params.id);
             await wineToRemove.destroy();
