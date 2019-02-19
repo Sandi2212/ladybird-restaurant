@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import ReserveButton from "../ReserveButton/ReserveButton";
 import "./Header.css";
-import { configureAnchors } from "react-scrollable-anchor";
-configureAnchors({ offset: -100, scrollDuration: 100 });
 
 class Header extends Component {
     componentDidMount() {

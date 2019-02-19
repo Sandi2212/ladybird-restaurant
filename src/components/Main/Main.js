@@ -6,20 +6,23 @@ import About from "../About/About";
 import Events from "../Events/Events";
 import Menus from "../Menus/Menus";
 import Contact from "../Contact/Contact";
-import ScrollableAnchor from "react-scrollable-anchor";
+import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
 
 const Main = props => {
+    configureAnchors({ offset: -props.headerOffset, scrollDuration: 100 });
     return (
         <div className="Main" style={{ paddingTop: `${props.headerOffset}px` }}>
-            <div id="home" className="page-section">
-                <Home />
-                <div className="sticky-side">
-                    <img
-                        src="/assets/ladybird-interior/ladybird-interior-picture.png"
-                        alt="Ladybird interior"
-                    />
+            <ScrollableAnchor id="home">
+                <div id="home" className="page-section">
+                    <Home />
+                    <div className="sticky-side">
+                        <img
+                            src="/assets/ladybird-interior/ladybird-interior-picture.png"
+                            alt="Ladybird interior"
+                        />
+                    </div>
                 </div>
-            </div>
+            </ScrollableAnchor>
             <div className="page-section">
                 <Blurb />
                 <div className="sticky-side">
@@ -29,15 +32,17 @@ const Main = props => {
                     />
                 </div>
             </div>
-            <div id="menus" className="page-section">
-                <div className="sticky-side">
-                    <img
-                        src="/assets/ladybird-napkin/ladybird-napkin.png"
-                        alt="ladybird napkin"
-                    />
+            <ScrollableAnchor id="menus">
+                <div id="menus" className="page-section">
+                    <div className="sticky-side">
+                        <img
+                            src="/assets/ladybird-napkin/ladybird-napkin.png"
+                            alt="ladybird napkin"
+                        />
+                    </div>
+                    <Menus />
                 </div>
-                <Menus />
-            </div>
+            </ScrollableAnchor>
             <ScrollableAnchor id="about">
                 <div className="page-section">
                     <About />
@@ -50,24 +55,28 @@ const Main = props => {
                 </div>
             </ScrollableAnchor>
             <div className="full-screen-image" />
-            <div id="events" className="page-section">
-                <div className="sticky-side">
-                    <img
-                        src="/assets/cocktail/ladybird-cocktail-2.png"
-                        alt="Cocktail"
-                    />
+            <ScrollableAnchor id="events">
+                <div id="events" className="page-section">
+                    <div className="sticky-side">
+                        <img
+                            src="/assets/cocktail/ladybird-cocktail-2.png"
+                            alt="Cocktail"
+                        />
+                    </div>
+                    <Events />
                 </div>
-                <Events />
-            </div>
-            <div id="contact" className="page-section">
-                <Contact />
-                <div className="sticky-side">
-                    <img
-                        src="/assets/ladybird-interior/ladybird-interior.png"
-                        alt="Ladybird Interior"
-                    />
+            </ScrollableAnchor>
+            <ScrollableAnchor id="contact">
+                <div id="contact" className="page-section">
+                    <Contact />
+                    <div className="sticky-side">
+                        <img
+                            src="/assets/ladybird-interior/ladybird-interior.png"
+                            alt="Ladybird Interior"
+                        />
+                    </div>
                 </div>
-            </div>
+            </ScrollableAnchor>
         </div>
     );
 };
