@@ -30,11 +30,11 @@ class Menus extends Component {
       const activeMenu = this.state.activeMenu
       const renderActiveMenu = (selectedMenu) => {
         if (selectedMenu === 'food') {
-          return <Food />
+          return <Food chefLoggedOn={this.props.chefLoggedOn} />;
         } else if (selectedMenu === 'wine') {
-          return <Wine />
+          return <Wine chefLoggedOn={this.props.chefLoggedOn} />;
         } else {
-          return <Cocktails />
+          return <Cocktails chefLoggedOn={this.props.chefLoggedOn} />;
         }
       }
       return (
