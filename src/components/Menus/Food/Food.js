@@ -167,16 +167,16 @@ class Food extends Component {
                 <button className="oc-edit-button">Submit</button>
             </form>
         </div>
-        <a href="#oc-create-item-modal" onClick={() => { this.handleCreateButtonClick("foods") }}><button className="oc-crud-button">New</button></a>
+        <a href="#oc-create-item-modal" onClick={() => { this.handleCreateButtonClick("foods") }}><button className="oc-crud-button oc-new-button">New</button></a>
         {foods}
         <h3 className="oc-food-item-header">Ladybird fondues (for 2-3)</h3>
         <p className="oc-fondue-info">
           Served with bread & assorted accoutrements
         </p>
-        <a href="#oc-create-item-modal" onClick={() => { this.handleCreateButtonClick("fondues") }}><button className="oc-crud-button">New</button></a>
+        <a href="#oc-create-item-modal" onClick={() => { this.handleCreateButtonClick("fondues") }}><button className="oc-crud-button oc-new-button">New</button></a>
         {fondues}
         <h3 className="oc-food-item-header">Desserts</h3>
-        <a href="#oc-create-item-modal" onClick={() => { this.handleCreateButtonClick("desserts") }}><button className="oc-crud-button">New</button></a>
+        <a href="#oc-create-item-modal" onClick={() => { this.handleCreateButtonClick("desserts") }}><button className="oc-crud-button oc-new-button">New</button></a>
         {desserts}
         <p className="oc-menu-note">
           <span className="oc-menu-note-label"> Note </span>
