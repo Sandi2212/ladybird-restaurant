@@ -8,7 +8,7 @@ const ensureAuthenticated = require("../middleware/ensureAuthenticated");
 module.exports = app => {
     app.get("/desserts", async (req, res) => {
         try {
-            const allDesserts = await Dessert.findAll({ order: [['updatedAt', 'DESC']] });
+            const allDesserts = await Dessert.findAll({ order: [['updated_at', 'DESC']] });
             res.json(allDesserts);
         } catch (error) {
             console.log(error);

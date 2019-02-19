@@ -8,7 +8,7 @@ const ensureAuthenticated = require("../middleware/ensureAuthenticated");
 module.exports = app => {
     app.get("/fondues", async (req, res) => {
         try {
-            const allFondues = await Fondue.findAll({ order: [['updatedAt', 'DESC']] });
+            const allFondues = await Fondue.findAll({ order: [['updated_at', 'DESC']] });
             res.json(allFondues);
         } catch (error) {
             console.log(error);
