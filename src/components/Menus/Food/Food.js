@@ -120,6 +120,27 @@ class Food extends Component {
     const desserts =
       this.state.allDesserts && this.renderFoodData(this.state.allDesserts, "desserts");
     return (
+    !this.props.chefLoggedOn 
+    ? 
+    <div className="oc-food-component">
+        {foods}
+        <h3 className="oc-food-item-header">Ladybird fondues (for 2-3)</h3>
+        <p className="oc-fondue-info">
+          Served with bread & assorted accoutrements
+        </p>
+        {fondues}
+        <h3 className="oc-food-item-header">Desserts</h3>
+        {desserts}
+        <p className="oc-menu-note">
+          <span className="oc-menu-note-label"> Note </span>
+          <span className="oc-menu-note-colon"> : </span>
+          <span className="oc-menu-note-message">
+            {" "}
+            The entire menu can be made gluten free, please ask your server
+          </span>
+        </p>
+    </div>
+    :
       <div className="oc-food-component">
         <div id="oc-edit-item-modal" className="oc-modal">
             <a href="#close" title="close" className="oc-close">X</a>
