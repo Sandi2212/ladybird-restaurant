@@ -1,7 +1,7 @@
 .header__menu-button {
-  color: white;
-  display: none;
-  text-align: right;
+    color: white;
+    display: none;
+    text-align: right;
 }
 
 .header__nav-bar li {
@@ -15,7 +15,7 @@
 }
 
 .nav-bar__gift-cards {
-  display: none;
+    display: none;
 }
 
 .header__nav-bar a {
@@ -27,11 +27,11 @@
 }
 
 .header__nav-bar a:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .nav-bar__menus {
-  order: -1;
+    order: -1;
 }
 
 header {
@@ -57,52 +57,53 @@ header a {
 }
 
 @media only screen and (max-width: 500px) {
-  header {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 10px 22px;
-  }
-  header img {
-    width: 50px;
-  }
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px 22px;
+    }
+    header img {
+        width: 50px;
+    }
 
-  .header__menu-button {
-    display: block;
-    width: 30px;
-    text-align: center;
-  }
+    .header__menu-button {
+        display: block;
+        width: 30px;
+        text-align: center;
+    }
 
-  .header__reserve-wrapper {
-    display: none;
-  }
+    .header__reserve-wrapper {
+        display: none;
+    }
 
-  .header__nav-bar {
-    height: 0;
-    overflow: hidden;
-    transition: all .5s;
-  }
+    .header__nav-bar {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
 
-  .header__nav-bar--visible {
-    height: 25em;
-  }
+    .header__nav-bar--visible {
+        height: 25em;
+    }
 
-  .header__nav-bar ul {
-    flex-direction: column;
-    padding: 0;
-  }
+    .header__nav-bar ul {
+        flex-direction: column;
+        padding: 0;
+    }
 
-  .header__nav-bar li, .nav-bar__gift-cards {
-    display: block;
-    text-transform: capitalize;
-    margin: 1em;
-    text-align: center;
-  }
+    .header__nav-bar li,
+    .nav-bar__gift-cards {
+        display: block;
+        text-transform: capitalize;
+        margin: 1em;
+        text-align: center;
+    }
 
-  .header__logo-wrapper {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .header__logo-wrapper {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
