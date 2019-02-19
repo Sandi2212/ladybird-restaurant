@@ -41,6 +41,13 @@
     margin:0;
 }
 
+.oc-crud-button{
+    font-size: 11px;
+    width:60px;
+    padding: 5px;
+    margin-left: 20px;
+}
+
 .oc-fondue-info{
     font-family: "Josefin Sans";
     font-weight: 300;
@@ -70,4 +77,72 @@
     font-family: "Josefin Sans";
     font-weight: 300;
     font-style: italic;
+}
+
+#oc-edit-item-modal, #oc-create-item-modal{
+    position: absolute;
+    left: 500px;
+    z-index:100;
+    pointer-events: none;
+    background: rgba(45, 102, 78, 0.8);
+    opacity:0;
+    transition: opacity 400ms ease-in;
+    padding:10px;
+}
+
+#oc-edit-item-modal:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.oc-modal-title, .oc-create-modal-title{
+    color:#e29f93;
+    width:200px;
+    text-align: center;
+}
+
+.oc-close, .oc-create-close{
+    color:#e29f93;
+    margin-left:90%;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.oc-input-label, .oc-create-label{
+    color:#e29f93;
+    font-family: "Josefin Sans";
+    font-weight: bold;
+    margin-left:25px;
+}
+
+.oc-input{
+    margin-bottom:20px;
+    padding:5px;
+    margin-left:25px;
+}
+
+.oc-edit-button{
+    font-size: 18px;
+    width:100px;
+    padding: 5px;
+    margin-left: 50px;
+}
+
+#oc-create-item-modal{
+    top:420px;
+   background: rgba(226, 159, 147, 0.8); 
+}
+
+#oc-create-item-modal:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.oc-create-modal-title, .oc-create-label, .oc-create-close{
+    color:#2d664e;
+}
+
+.oc-create-button{
+    background:#2d664e;
 }
