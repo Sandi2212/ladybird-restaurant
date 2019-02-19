@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Food from "./Food/Food"
 import Wine from "./Wine/Wine"
 import Cocktails from "./Cocktails/Cocktails"
+import ReserveButton from '../ReserveButton/ReserveButton'
 import './Menus.css'
 
 class Menus extends Component {
@@ -47,6 +48,9 @@ class Menus extends Component {
               </div>
               <div className={`menus__active ${menuIsLeaving ? 'menus__active-leaving' : null}`}>
                 {renderActiveMenu(activeMenu)}
+              </div>
+              <div className="menus__reserve-button">
+                <ReserveButton />
               </div>
           </div>
       )

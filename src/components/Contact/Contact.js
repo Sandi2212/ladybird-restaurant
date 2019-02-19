@@ -43,7 +43,9 @@ const Contact = () => {
           <a className="contact__link" href="mailto:press@ladybirdny.com">press@ladybirdny.com</a>
         </p>
       </div>
-      <ReserveButton />
+      <div className="contact__reserve-button">
+        <ReserveButton />
+      </div>
     </div>
   )
 }

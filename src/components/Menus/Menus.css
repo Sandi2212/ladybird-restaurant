@@ -5,6 +5,10 @@
   padding: 45px;
 }
 
+.menus__reserve-button {
+  display: none;
+}
+
 .menus_header {
   width: 143px;
   height: 45px;
@@ -60,9 +64,16 @@
   .menus_header{
     font-size: 30px;
 
-  }.menus__link{
+  }
+  .menus__link{
     font-size: 20px;
-
+  }
+  
+  .menus__reserve-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 55px auto 20px;
   }
 }
   
