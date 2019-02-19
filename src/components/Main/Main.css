@@ -31,7 +31,6 @@
     height: 100vh;
 }
 @media (max-width: 500px) {  
-      
 .page-section{
   flex-direction: column;
   align-items: center; 
@@ -46,7 +45,16 @@
     min-width: auto;
     min-height: auto;    
 }
-  .full-screen-image{
-    height: 67vw; 
+  
+  .full-screen-image {
+    height: 67vw;
+  }
+
+  .sticky-side__menus {
+    order: 1;
+  }
+
+  .sticky-side__events {
+    display: none;
   }
 }
