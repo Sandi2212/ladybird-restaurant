@@ -34,7 +34,7 @@
 .page-section{
   flex-direction: column;
   align-items: center; 
- 
+  min-height: 0;
 }
 .sticky-side {
    width:100vw;
