@@ -47,3 +47,30 @@
 .home__image-holder, .home__address, .home__hours, .home__phone {
   margin: 10px;
 }
+
+
+@media only screen and (max-width: 500px) {
+  .Home {
+    width: 100vw;
+    min-height: auto;
+    font-size: 16px;
+    padding: 45px 10px;
+    justify-content: flex-start;
+  }
+
+  .home__image-holder {
+    height: 136px;
+  }
+
+  .home__logo, .home__name {
+    width: 100px;
+  }
+
+  .hours__heading {
+    font-size: 16px;
+  }
+
+  .home__image-holder, .home__address, .home__hours, .home__phone, .Home.ReserveButton {
+    margin: 25px 0;
+  }
+}

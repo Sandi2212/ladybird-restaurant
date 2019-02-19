@@ -63,3 +63,17 @@
 .contact__section--final {
   margin-bottom: 42px;
 }
+@media (max-width: 500px) {      
+  .Contact{
+    width: 100vw;
+    font-size: 16px;
+  }
+  .contact__heading {
+    font-size: 30px;
+
+  }
+  .contact__section-heading{
+    font-size: 16px;
+  }
+}
+  

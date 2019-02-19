@@ -52,3 +52,16 @@
 .menus__active-leaving {
   opacity: 0;
 }
+@media (max-width: 500px) {      
+  .Menus{
+    width: 100vw;
+  }
+  .menus_header{
+    font-size: 30px;
+
+  }.menus__link{
+    font-size: 20px;
+
+  }
+}
+  

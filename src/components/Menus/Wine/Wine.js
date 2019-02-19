@@ -7,10 +7,7 @@ class Wine extends Component {
         super();
         this.state = {
             allWine: null,
-            allBeer: null,
-            whiteWine: null,
-            redWine: null,
-            rose: null
+            allBeer: null
         };
     }
 
@@ -20,7 +17,7 @@ class Wine extends Component {
                 <h2>{category}</h2>
                 {this.state.allWine
                     .filter(wine => {
-                        return wine.category == category;
+                        return wine.category === category;
                     })
                     .map(whiteWine => {
                         return (
@@ -75,7 +72,7 @@ class Wine extends Component {
                 <h2>{category}</h2>
                 {this.state.allBeer
                     .filter(beer => {
-                        return beer.category == category;
+                        return beer.category === category;
                     })
                     .map(beer => {
                         return (
@@ -126,14 +123,12 @@ class Wine extends Component {
     getWineData = async () => {
         const response = await axios.get("/wines");
         const allWine = response.data;
-        console.log(allWine);
         this.setState({ allWine });
     };
 
     getBeerData = async () => {
         const response = await axios.get("/beers");
         const allBeer = response.data;
-        console.log(allBeer);
         this.setState({ allBeer });
     };
 
