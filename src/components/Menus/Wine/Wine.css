@@ -65,3 +65,45 @@
     height: auto;
     overflow: auto;
 }
+
+.oc-wine-modal{
+    top:420px;
+}
+
+#oc-edit-beer-modal{
+    top:420px;
+    position: absolute;
+    left: 500px;
+    z-index:100;
+    pointer-events: none;
+    background: rgba(45, 102, 78, 0.8);
+    opacity:0;
+    transition: opacity 400ms ease-in;
+    padding:10px;
+}
+
+#oc-edit-beer-modal:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#oc-create-beer-modal{
+    top:420px;
+    background: rgba(226, 159, 147, 0.8); 
+    opacity:0;
+    transition: opacity 400ms ease-in;
+    padding:10px;
+    position: absolute;
+    left: 500px;
+    z-index:100;
+    pointer-events: none;
+}
+
+#oc-create-beer-modal:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.oc-create-modal-title, .oc-create-label, .oc-create-close{
+    color:#2d664e;
+}

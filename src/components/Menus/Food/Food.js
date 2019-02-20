@@ -145,7 +145,7 @@ class Food extends Component {
         <div id="oc-edit-item-modal" className="oc-modal">
             <a href="#close" title="close" className="oc-close">X</a>
             <h1 className="oc-modal-title">Edit Item</h1>
-                <form onChange={this.onFormChange} onSubmit={this.onEditFormSubmit}>
+            <form onChange={this.onFormChange} onSubmit={this.onEditFormSubmit}>
                 <label className="oc-input-label">
                     Dish
                 <br />
