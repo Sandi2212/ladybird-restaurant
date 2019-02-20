@@ -1,50 +1,79 @@
 .Join-the-Mailing-List {
-    width: 374px;
-    height: 37px;
-    font-family: 'Josefin Sans', sans-serif;
-    text-transform: uppercase;
-    margin: 0 0 17px;
-    font-size: 30px;
-    font-weight: bold;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-   
-    
+  width: 374px;
+  height: 37px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 17px;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.Email-Address {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: .8em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-right: 12px;
+  padding: 12px;
+  color: #9b9b9b;
+  width: 225px;
+  height: 48px;
+  border-radius: 5px;
+  position: relative;
+  border: 2px solid #979797 inset;
+}
+.Sign-Up {
+  background-color: #e29f93;
+  width: 137px;
+  height: 47px;
+  border-radius: 23.5px;;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .5s;
+  cursor: pointer; 
+}
+.Sign-Up:hover {
+  opacity: .7;
+} 
+
+@media only screen and (max-width: 500px) {
+  .mailchimp__parent {
+    width: 100%;
+    overflow: hidden;
   }
-  .Email-Address {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: .8em;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    margin-right: 12px;
-    padding: 12px;
-    color: #9b9b9b;
-    width: 225px;
-    height: 48px;
-    border-radius: 5px;
-    position: relative;
-    border: 2px solid #979797 inset;
-  }
-  .Sign-Up {
-    background-color: #e29f93;
-    width: 137px;
-    height: 47px;
-    border-radius: 23.5px;;
+
+  .Join-the-Mailing-List {
+    width: 100%;
+    height: auto;
     font-size: 20px;
-    font-weight: bold;
-    font-family: 'Josefin Sans', sans-serif;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all .5s;
-    cursor: pointer; 
-    position: relative;
+    text-align: center;
   }
-  .Sign-Up:hover {
-    opacity: .7;
-  } 
+
+  .mailchimp__input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .Email-Address {
+    width: auto;
+    margin: 0;
+    padding: 2px 5px;
+  }
+
+  .Sign-Up {
+    width: auto;
+    margin: 0;
+  }
+}

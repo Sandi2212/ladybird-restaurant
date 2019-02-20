@@ -49,3 +49,16 @@
 .events__link:hover {
   opacity: .7;
 }
+@media (max-width: 500px) {      
+  .Events{
+    width: 100vw;
+    font-size:16px; 
+  }
+  .events__heading {
+    font-size: 30px;
+  }
+  .events__section-heading{
+    font-size: 16px ;
+  }
+}
+  
