@@ -296,19 +296,19 @@ class Wine extends Component {
                     <label className="oc-input-label">
                         Year
                     <br />
-                        <input className="oc-input" name="year" placeholder="Year of the Wine" type="text" />
+                        <input className="oc-input" name="year" placeholder="Year of the Wine" type="number" />
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Glass Price
                     <br />
-                        <input className="oc-input" name="glass_price" placeholder="Glass Price of the Wine" type="text" />
+                        <input className="oc-input" name="glass_price" placeholder="Glass Price of the Wine" type="number" />
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Bottle Price
                     <br />
-                        <input className="oc-input" name="bottle_price" placeholder="Bottle Price of the Wine" type="text" />
+                        <input className="oc-input" name="bottle_price" placeholder="Bottle Price of the Wine" type="number" />
                     </label>
                     <br />
                     <button className="oc-edit-button">Submit</button>
@@ -345,19 +345,19 @@ class Wine extends Component {
                     <label className="oc-input-label oc-create-label">
                         Year
                     <br />
-                        <input className="oc-input" name="year" placeholder="Year of the Wine" type="text" />
+                        <input className="oc-input" name="year" placeholder="Year of the Wine" type="number" />
                     </label>
                     <br />
                     <label className="oc-input-label oc-create-label">
                         Glass Price
                     <br />
-                        <input className="oc-input" name="glass_price" placeholder="Glass Price of the Wine" type="text" />
+                        <input className="oc-input" name="glass_price" placeholder="Glass Price of the Wine" type="number" />
                     </label>
                     <br />
                     <label className="oc-input-label oc-create-label">
                         Bottle Price
                     <br />
-                        <input className="oc-input" name="bottle_price" placeholder="Bottle Price of the Wine" type="text" />
+                        <input className="oc-input" name="bottle_price" placeholder="Bottle Price of the Wine" type="number" />
                     </label>
                     <br />
                     <button className="oc-edit-button oc-create-button">Submit</button>
@@ -414,19 +414,19 @@ class Wine extends Component {
                     <label className="oc-input-label">
                         Ounces
                     <br />
-                        <input className="oc-input" name="oz" placeholder="Ounces of the Beer" type="text" />
+                        <input className="oc-input" name="oz" placeholder="Ounces of the Beer" type="number" />
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Alcohol By Volume
                     <br />
-                        <input className="oc-input" name="abv" placeholder="ABV of the Beer" type="text" />
+                        <input className="oc-input" name="abv" placeholder="ABV of the Beer" type="number" />
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Price
                     <br />
-                        <input className="oc-input" name="price" placeholder="Price of the Beer" type="text" />
+                        <input className="oc-input" name="price" placeholder="Price of the Beer" type="number" />
                     </label>
                     <br />
                     <button className="oc-edit-button">Submit</button>
@@ -469,19 +469,19 @@ class Wine extends Component {
                     <label className="oc-input-label oc-create-label">
                         Ounces
                     <br />
-                        <input className="oc-input" name="oz" placeholder="Ounces of the Beer" type="text" />
+                        <input className="oc-input" name="oz" placeholder="Ounces of the Beer" type="number" />
                     </label>
                     <br />
                     <label className="oc-input-label oc-create-label">
                         Alcohol By Volume
                     <br />
-                        <input className="oc-input" name="abv" placeholder="ABV of the Beer" type="text" />
+                        <input className="oc-input" name="abv" placeholder="ABV of the Beer" type="number" />
                     </label>
                     <br />
                     <label className="oc-input-label oc-create-label">
                         Price
                     <br />
-                        <input className="oc-input" name="price" placeholder="Price of the Beer" type="text" />
+                        <input className="oc-input" name="price" placeholder="Price of the Beer" type="number" />
                     </label>
                     <br />
                     <button className="oc-edit-button oc-create-button">Submit</button>

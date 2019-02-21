@@ -32,7 +32,7 @@ const Main = props => {
                     />
                 </div>
             </div>
-            <ScrollableAnchor id="menus">
+            {/* <ScrollableAnchor id="menus"> */}
                 <div className="page-section">
                     <div className="sticky-side sticky-side__menus">
                         <img
@@ -42,7 +42,7 @@ const Main = props => {
                     </div>
                     <Menus chefLoggedOn={props.chefLoggedOn} />
                 </div>
-            </ScrollableAnchor>
+            {/* </ScrollableAnchor> */}
             <ScrollableAnchor id="about">
                 <div className="page-section">
                     <About />

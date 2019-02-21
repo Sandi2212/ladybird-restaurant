@@ -155,7 +155,7 @@ class Food extends Component {
                 <label className="oc-input-label">
                     Price
                 <br />
-                    <input className="oc-input" name="price" placeholder="Price of the Dish" type="text" />
+                    <input className="oc-input" name="price" placeholder="Price of the Dish" type="number" />
                 </label>
                 <br />
                 <label className="oc-input-label">
@@ -199,7 +199,7 @@ class Food extends Component {
                     <label className="oc-input-label oc-create-label">
                     Price
                 <br />
-                    <input className="oc-input" name="price" placeholder="Price of the Dish" type="text" />
+                    <input className="oc-input" name="price" placeholder="Price of the Dish" type="number" />
                 </label>
                 <br />
                     <label className="oc-input-label oc-create-label">
