@@ -7,12 +7,13 @@ class  Cocktails extends Component{
         super()
         this.state = {
           allCocktails: [],
-          idOfCocktailToEdit: "",
+          cocktailToEdit: null,
+          idOfCocktailToEdit: null
         };
     }
 
-    handleEditButtonClick = (idOfCocktailToEdit) => {
-        this.setState({ idOfCocktailToEdit});
+    handleEditButtonClick = (idOfCocktailToEdit, cocktailToEdit) => {
+        this.setState({ idOfCocktailToEdit, cocktailToEdit});
     }
 
     deleteItem = async (itemId) => {
@@ -65,6 +66,7 @@ class  Cocktails extends Component{
   
     render(){
         const allCocktails = this.state.allCocktails
+        const cocktail = this.state.cocktailToEdit
         const alcoholicCocktails = allCocktails.filter(cocktail => {
 	    return cocktail.alcohol_free === false
         }).map(cocktail => {
@@ -79,7 +81,7 @@ class  Cocktails extends Component{
                     {this.props.chefLoggedOn ? (
                         <span>
                             <a href="#oc-edit-item-modal">
-                                <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(cocktail.id) }}>Edit</button>
+                                <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(cocktail.id, cocktail) }}>Edit</button>
                             </a>
                             <button className="oc-crud-button" onClick={() => { this.deleteItem(cocktail.id) }}>Delete</button>
                         </span>
@@ -107,9 +109,9 @@ class  Cocktails extends Component{
                     {this.props.chefLoggedOn ? (
                         <span>
                             <a href="#oc-edit-item-modal">
-                                <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(cocktail.id, "cocktails") }}>Edit</button>
+                                <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(cocktail.id, cocktail) }}>Edit</button>
                             </a>
-                            <button className="oc-crud-button" onClick={() => { this.deleteItem(cocktail.id, "cocktails") }}>Delete</button>
+                            <button className="oc-crud-button" onClick={() => { this.deleteItem(cocktail.id) }}>Delete</button>
                         </span>
                     ) : null}
                     </h4>
@@ -130,36 +132,36 @@ class  Cocktails extends Component{
             <div className="cocktails">
                 <div id="oc-edit-item-modal" className="oc-modal">
                     <a href="#close" title="close" className="oc-close">X</a>
-                    <h1 className="oc-modal-title">Edit Item</h1>
+                    <h1 className="oc-modal-title">Edit Cocktail</h1>
                     <form onChange={this.onFormChange} onSubmit={this.onEditFormSubmit}>
                         <label className="oc-input-label">
                             Name
                         <br />
-                            <input className="oc-input" name="name" placeholder="Name of the Cocktail" type="text" />
+                            <input className="oc-input" name="name" placeholder="Name of the Cocktail" type="text" defaultValue={cocktail && cocktail.name}/>
                         </label>
                         <br />
                         <label className="oc-input-label">
                             Ingredients
                         <br />
-                            <input className="oc-input" name="ingredients" placeholder="Ingredients in the Cocktail" type="text" />
+                            <input className="oc-input" name="ingredients" placeholder="Ingredients in the Cocktail" type="text" defaultValue={cocktail && cocktail.ingredients}/>
                         </label>
                         <br />
                         <label className="oc-input-label">
                             Alcohol Free?
                         <br />
-                            <input className="oc-input" name="alcohol_free" placeholder="Is Cocktail Alcoholic?" type="text" />
+                            <input className="oc-input" name="alcohol_free" placeholder="Is Cocktail Alcoholic?" type="text" defaultValue={cocktail && cocktail.alcohol_free}/>
                         </label>
                         <br />
                         <label className="oc-input-label">
                             Small Price
                         <br />
-                            <input className="oc-input" name="small_price" placeholder="Price of a Small" type="number" />
+                            <input className="oc-input" name="small_price" placeholder="Price of a Small" type="number" defaultValue={cocktail && cocktail.small_price}/>
                         </label>
                         <br />
                         <label className="oc-input-label">
                             Large Price
                         <br />
-                            <input className="oc-input" name="large_price" placeholder="Price of a Large" type="number" />
+                            <input className="oc-input" name="large_price" placeholder="Price of a Large" type="number" defaultValue={cocktail && cocktail.large_price}/>
                         </label>
                         <br />
                         <button className="oc-edit-button">Submit</button>
@@ -172,7 +174,7 @@ class  Cocktails extends Component{
                 {alcoholFreeCocktails}
                 <div id="oc-create-item-modal" className="oc-modal oc-create-modal">
                     <a href="#close-create" title="close-create" className="oc-create-close">X</a>
-                    <h1 className="oc-create-modal-title">Create Item</h1>
+                    <h1 className="oc-create-modal-title">New Cocktail</h1>
                         <form onChange={this.onFormChange} onSubmit={this.onCreateFormSubmit}>
                         <label className="oc-input-label oc-create-label">
                             Name

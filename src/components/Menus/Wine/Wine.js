@@ -8,14 +8,15 @@ class Wine extends Component {
         this.state = {
             allWine: null,
             allBeer: null,
+            drinkToEdit: null,
             idOfDrinkToEdit: null,
             typeOfDrinkToEdit: null,
             typeOfDrinkToCreate: null
         };
     }
 
-    handleEditButtonClick = (idOfDrinkToEdit, typeOfDrinkToEdit) => {
-        this.setState({ idOfDrinkToEdit, typeOfDrinkToEdit });
+    handleEditButtonClick = (idOfDrinkToEdit, typeOfDrinkToEdit, drinkToEdit) => {
+        this.setState({ idOfDrinkToEdit, typeOfDrinkToEdit, drinkToEdit });
     }
 
     handleCreateButtonClick = (typeOfDrinkToCreate) => {
@@ -136,7 +137,7 @@ class Wine extends Component {
                                             {this.props.chefLoggedOn ? (
                                                 <span>
                                                     <a href="#oc-edit-item-modal">
-                                                        <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(whiteWine.id, "wines") }}>Edit</button>
+                                                        <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(whiteWine.id, "wines", whiteWine) }}>Edit</button>
                                                     </a>
                                                     <button className="oc-crud-button" onClick={() => { this.deleteItem(whiteWine.id, "wines") }}>Delete</button>
                                                 </span>
@@ -191,7 +192,7 @@ class Wine extends Component {
                                             {this.props.chefLoggedOn ? (
                                                 <span>
                                                     <a href="#oc-edit-beer-modal">
-                                                        <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(beer.id, "beers") }}>Edit</button>
+                                                        <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(beer.id, "beers", beer) }}>Edit</button>
                                                     </a>
                                                     <button className="oc-crud-button" onClick={() => { this.deleteItem(beer.id, "beers") }}>Delete</button>
                                                 </span>
@@ -250,6 +251,7 @@ class Wine extends Component {
     }
 
     render() {
+        const drink = this.state.drinkToEdit;
         return this.state.allWine && this.state.allBeer ? (
         !this.props.chefLoggedOn 
         ?
@@ -267,48 +269,48 @@ class Wine extends Component {
         <div className="wines">
             <div id="oc-edit-item-modal" className="oc-modal oc-wine-modal">
                 <a href="#close" title="close" className="oc-close">X</a>
-                <h1 className="oc-modal-title">Edit Item</h1>
+                <h1 className="oc-modal-title">Edit Wine</h1>
                 <form onChange={this.onFormChange} onSubmit={this.onWineEditFormSubmit}>
                     <label className="oc-input-label">
                         Category
                     <br />
-                        <input className="oc-input" name="category" placeholder="Category of the Wine" type="text" />
+                        <input className="oc-input" name="category" placeholder="Category of the Wine" type="text" defaultValue={drink && drink.category}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Varietal
                     <br />
-                        <input className="oc-input" name="varietal" placeholder="Varietal of the Wine" type="text" />
+                        <input className="oc-input" name="varietal" placeholder="Varietal of the Wine" type="text" defaultValue={drink && drink.varietal}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Vineyard
                     <br />
-                        <input className="oc-input" name="vineyard" placeholder="Vineyard of the Wine" type="text" />
+                        <input className="oc-input" name="vineyard" placeholder="Vineyard of the Wine" type="text" defaultValue={drink && drink.vineyard}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Region
                     <br />
-                        <input className="oc-input" name="region" placeholder="Region of the Wine" type="text" />
+                        <input className="oc-input" name="region" placeholder="Region of the Wine" type="text" defaultValue={drink && drink.region}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Year
                     <br />
-                        <input className="oc-input" name="year" placeholder="Year of the Wine" type="number" />
+                        <input className="oc-input" name="year" placeholder="Year of the Wine" type="number" defaultValue={drink && drink.year}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Glass Price
                     <br />
-                        <input className="oc-input" name="glass_price" placeholder="Glass Price of the Wine" type="number" />
+                        <input className="oc-input" name="glass_price" placeholder="Glass Price of the Wine" type="number" defaultValue={drink && drink.glass_price}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Bottle Price
                     <br />
-                        <input className="oc-input" name="bottle_price" placeholder="Bottle Price of the Wine" type="number" />
+                        <input className="oc-input" name="bottle_price" placeholder="Bottle Price of the Wine" type="number" defaultValue={drink && drink.bottle_price}/>
                     </label>
                     <br />
                     <button className="oc-edit-button">Submit</button>
@@ -316,7 +318,7 @@ class Wine extends Component {
             </div>
             <div id="oc-create-item-modal" className="oc-modal oc-create-modal">
                 <a href="#close-create" title="close-create" className="oc-create-close">X</a>
-                <h1 className="oc-create-modal-title">Create Item</h1>
+                <h1 className="oc-create-modal-title">New Wine</h1>
                     <form onChange={this.onFormChange} onSubmit={this.onWineCreateFormSubmit}>
                     <label className="oc-input-label oc-create-label">
                         Category
@@ -379,54 +381,54 @@ class Wine extends Component {
             {this.renderBeer("cider")}
             <div id="oc-edit-beer-modal" className="oc-modal">
                 <a href="#close" title="close" className="oc-close">X</a>
-                <h1 className="oc-modal-title">Edit Item</h1>
+                <h1 className="oc-modal-title">Edit Beer</h1>
                 <form onChange={this.onFormChange} onSubmit={this.onBeerEditFormSubmit}>
                     <label className="oc-input-label">
                         Category
                     <br />
-                        <input className="oc-input" name="category" placeholder="Category of the Beer" type="text" />
+                        <input className="oc-input" name="category" placeholder="Category of the Beer" type="text" defaultValue={drink && drink.category}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Name
                     <br />
-                        <input className="oc-input" name="name" placeholder="Name of the Beer" type="text" />
+                        <input className="oc-input" name="name" placeholder="Name of the Beer" type="text" defaultValue={drink && drink.name}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Brewery
                     <br />
-                        <input className="oc-input" name="brewery" placeholder="Brewery of the Beer" type="text" />
+                        <input className="oc-input" name="brewery" placeholder="Brewery of the Beer" type="text" defaultValue={drink && drink.brewery}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Region
                     <br />
-                        <input className="oc-input" name="region" placeholder="Region of the Beer" type="text" />
+                        <input className="oc-input" name="region" placeholder="Region of the Beer" type="text" defaultValue={drink && drink.region}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Container
                     <br />
-                        <input className="oc-input" name="container" placeholder="Container of the Beer" type="text" />
+                        <input className="oc-input" name="container" placeholder="Container of the Beer" type="text" defaultValue={drink && drink.container}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Ounces
                     <br />
-                        <input className="oc-input" name="oz" placeholder="Ounces of the Beer" type="number" />
+                        <input className="oc-input" name="oz" placeholder="Ounces of the Beer" type="number" defaultValue={drink && drink.oz}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Alcohol By Volume
                     <br />
-                        <input className="oc-input" name="abv" placeholder="ABV of the Beer" type="number" />
+                        <input className="oc-input" name="abv" placeholder="ABV of the Beer" type="number" defaultValue={drink && drink.abv}/>
                     </label>
                     <br />
                     <label className="oc-input-label">
                         Price
                     <br />
-                        <input className="oc-input" name="price" placeholder="Price of the Beer" type="number" />
+                        <input className="oc-input" name="price" placeholder="Price of the Beer" type="number" defaultValue={drink && drink.price}/>
                     </label>
                     <br />
                     <button className="oc-edit-button">Submit</button>
@@ -434,7 +436,7 @@ class Wine extends Component {
             </div>
             <div id="oc-create-beer-modal" className="oc-modal oc-create-modal">
                 <a href="#close-create" title="close-create" className="oc-create-close">X</a>
-                <h1 className="oc-create-modal-title">Create Item</h1>
+                <h1 className="oc-create-modal-title">New Beer</h1>
                 <form onChange={this.onFormChange} onSubmit={this.onBeerCreateFormSubmit}>
                     <label className="oc-input-label oc-create-label">
                         Category

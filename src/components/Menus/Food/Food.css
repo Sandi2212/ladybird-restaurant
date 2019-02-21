@@ -150,3 +150,7 @@
 .oc-create-button{
     background:#2d664e;
 }
+
+.oc-capitalize{
+    text-transform: capitalize;
+}

@@ -10,14 +10,15 @@ class Food extends Component {
       allFoods: null,
       allFondues: null,
       allDesserts: null,
+      foodItemToEdit: null,
       idOfItemToEdit: null,
       foodTypeOfItemToEdit: null,
       foodTypeOfItemToCreate:null
     };
   }
 
-  handleEditButtonClick = (idOfItemToEdit, foodTypeOfItemToEdit) => {
-    this.setState({ idOfItemToEdit, foodTypeOfItemToEdit });
+  handleEditButtonClick = (idOfItemToEdit, foodTypeOfItemToEdit, foodItemToEdit) => {
+    this.setState({ idOfItemToEdit, foodTypeOfItemToEdit, foodItemToEdit });
   }
 
   handleCreateButtonClick = (foodTypeOfItemToCreate) => {
@@ -78,7 +79,7 @@ class Food extends Component {
             {this.props.chefLoggedOn ? (
             <span>
                 <a href="#oc-edit-item-modal">
-                    <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(foodItem.id, foodType) } }>Edit</button>
+                    <button className="oc-crud-button" onClick={() => { this.handleEditButtonClick(foodItem.id, foodType, foodItem) } }>Edit</button>
                 </a>
                 <button className="oc-crud-button" onClick={() => { this.deleteItem(foodItem.id, foodType) } }>Delete</button>
             </span>
@@ -119,6 +120,9 @@ class Food extends Component {
       this.state.allFondues && this.renderFoodData(this.state.allFondues, "fondues");
     const desserts =
       this.state.allDesserts && this.renderFoodData(this.state.allDesserts, "desserts");
+    const foodItem = this.state.foodItemToEdit
+    const foodTypeToEdit = this.state.foodTypeOfItemToEdit && this.state.foodTypeOfItemToEdit.slice(0, -1);
+    const foodTypeToCreate = this.state.foodTypeOfItemToCreate && this.state.foodTypeOfItemToCreate.slice(0, -1);
     return (
     !this.props.chefLoggedOn 
     ? 
@@ -144,24 +148,24 @@ class Food extends Component {
       <div className="oc-food-component">
         <div id="oc-edit-item-modal" className="oc-modal">
             <a href="#close" title="close" className="oc-close">X</a>
-            <h1 className="oc-modal-title">Edit Item</h1>
+                    <h1 className="oc-modal-title">Edit <span className="oc-capitalize">{foodTypeToEdit}</span></h1>
             <form onChange={this.onFormChange} onSubmit={this.onEditFormSubmit}>
                 <label className="oc-input-label">
                     Dish
                 <br />
-                    <input className="oc-input" name="dish" placeholder="Name of the Dish" type="text" />
+                    <input className="oc-input" name="dish" placeholder="Name of the Dish" type="text" defaultValue={foodItem && foodItem.name}/>
                 </label>
                 <br />
                 <label className="oc-input-label">
                     Price
                 <br />
-                    <input className="oc-input" name="price" placeholder="Price of the Dish" type="number" />
+                    <input className="oc-input" name="price" placeholder="Price of the Dish" type="number" defaultValue={foodItem && foodItem.price}/>
                 </label>
                 <br />
                 <label className="oc-input-label">
                     Ingredients
                 <br />
-                    <input className="oc-input" name="ingredients" placeholder="List of the Ingredients" type="text" />
+                    <input className="oc-input" name="ingredients" placeholder="List of the Ingredients" type="text" defaultValue={foodItem && foodItem.ingredients}/>
                 </label>
                 <br />
                 <button className="oc-edit-button">Submit</button>
@@ -188,7 +192,7 @@ class Food extends Component {
         </p>
         <div id="oc-create-item-modal" className="oc-modal oc-create-modal">
             <a href="#close-create" title="close-create" className="oc-create-close">X</a>
-            <h1 className="oc-create-modal-title">Create Item</h1>
+                    <h1 className="oc-create-modal-title">New <span className="oc-capitalize">{foodTypeToCreate}</span></h1>
                 <form onChange={this.onFormChange} onSubmit={this.onCreateFormSubmit}>
                 <label className="oc-input-label oc-create-label">
                     Dish
